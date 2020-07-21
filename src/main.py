@@ -35,11 +35,12 @@ class Data:
     def get_country_data(self, name):
         countries = self.data['country']
         for country in countries:
-            if country['name'] == name:
-                return country['total_cases'], country['total_deaths'], country['total_recovered']
+            if country['name'].lower() == name.lower():
+                return country
 
 
 data = Data(API_KEY, PROJECT_TOKEN)
 print(data.data)
 print(data.get_total_cases())
 print(data.get_total_deaths())
+print(data.get_country_data('India'))
