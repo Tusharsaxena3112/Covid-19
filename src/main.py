@@ -48,7 +48,21 @@ def speak(text):
     engine.runAndWait()
 
 
-speak('Hello Ladies and Gentlemen')
+def get_audio():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        audio = r.listen(source)
+        said = ""
+
+        try:
+            said = r.recognize_google(audio)
+        except Exception as e:
+            print("Exception", str(e))
+        return said
+
+# print(get_audio())
+
+# speak('Hello Ladies and Gentlemen')
 
 # data = Data(API_KEY, PROJECT_TOKEN)
 # print(data.data)
