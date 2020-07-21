@@ -1,5 +1,8 @@
 import requests
 import json
+import pyttsx3
+import speech_recognition as sr
+import re
 
 API_KEY = 'tesSpQOvJQ4h'
 PROJECT_TOKEN = 'tiO63kghSOtt'
@@ -39,8 +42,22 @@ class Data:
                 return country
 
 
-data = Data(API_KEY, PROJECT_TOKEN)
-print(data.data)
-print(data.get_total_cases())
-print(data.get_total_deaths())
-print(data.get_country_data('India'))
+def speak(text):
+    engine = pyttsx3.init()
+    engine.say(text)
+    engine.runAndWait()
+
+
+speak('Hello Ladies and Gentlemen')
+
+# data = Data(API_KEY, PROJECT_TOKEN)
+# print(data.data)
+# print(data.get_total_cases())
+# print(data.get_total_deaths())
+# print(data.get_country_data('India'))
+
+# for audio we use some of the packages :
+# 1. pywin32
+# 2. pyttsx3
+# 3.SpeechRecognition
+# 4.pyaudio
