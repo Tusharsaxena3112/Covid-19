@@ -35,6 +35,12 @@ class Data:
             if total['name'] == 'Deaths:':
                 return total['value']
 
+    def get_total_recovered(self):
+        recovered = self.data['total']
+        for total in recovered:
+            if total['name'] == 'Recovered:':
+                return total['value']
+
     def get_country_data(self, name):
         countries = self.data['country']
         for country in countries:
@@ -58,12 +64,31 @@ def get_audio():
             said = r.recognize_google(audio)
         except Exception as e:
             print("Exception", str(e))
-        return said
+        return said.lower()
 
+
+def main():
+    print("Started")
+    data = Data(API_KEY, PROJECT_TOKEN)
+    END_PHRASE = 'stop'
+    Total_patterns = {
+        re.compile('[\\w\\s]+ total [\\w\\s]+ cases'): data.get_total_cases,
+        re.compile('[\\w\\s]* total [\\w\\s]* cases'): data.get_total_cases,
+        re.compile('[\\w\\s]* total [\\w\\s]* deaths'): data.get_total_deaths,
+        re.compile('[\\w\\s]* total [\\w\\s]* recovered'): data.get_total_recovered
+    }
+    while True:
+        print('Listening.....')
+        text = get_audio()
+
+        if text.find(END_PHRASE) != -1:
+            print('Exit')
+            break
 
 # print(get_audio())
 # speak('Hello Tushar and tanishq')
-# data = Data(API_KEY, PROJECT_TOKEN)
+data = Data(API_KEY, PROJECT_TOKEN)
+print(data.data)
 # print(data.data)
 # print(data.get_total_cases())
 # print(data.get_total_deaths())
