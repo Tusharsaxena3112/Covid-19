@@ -60,17 +60,18 @@ def get_audio():
             print("Exception", str(e))
         return said
 
+
 # print(get_audio())
-
-# speak('Hello Ladies and Gentlemen')
-
+# speak('Hello Tushar and tanishq')
 # data = Data(API_KEY, PROJECT_TOKEN)
 # print(data.data)
 # print(data.get_total_cases())
 # print(data.get_total_deaths())
 # print(data.get_country_data('India'))
 
+
 # for audio we use some of the packages :
+
 # 1. pywin32
 # 2. pyttsx3
 # 3.SpeechRecognition
