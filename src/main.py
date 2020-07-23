@@ -71,24 +71,50 @@ def main():
     print("Started")
     data = Data(API_KEY, PROJECT_TOKEN)
     END_PHRASE = 'stop'
-    Total_patterns = {
-        re.compile('[\\w\\s]+ total [\\w\\s]+ cases'): data.get_total_cases,
-        re.compile('[\\w\\s]* total [\\w\\s]* cases'): data.get_total_cases,
-        re.compile('[\\w\\s]* total [\\w\\s]* deaths'): data.get_total_deaths,
-        re.compile('[\\w\\s]* total [\\w\\s]* recovered'): data.get_total_recovered
+    TOTAL_PATTERNS = {
+        re.compile("[\\w\\s]+ total [\\w\\s]+ cases"): data.get_total_cases,
+        re.compile("[\\w\\s]+ total cases"): data.get_total_cases,
+        re.compile("[\\w\\s]+ total cases [\\w\\s]+"): data.get_total_cases,
+        re.compile("total cases [\\w\\s]+"): data.get_total_cases,
+        re.compile("total cases"): data.get_total_cases,
+        re.compile("[\\w\\s]+ death [\\w\\s]+"): data.get_total_deaths,
+        re.compile("[\\w\\s]+ total [\\w\\s]+ death"): data.get_total_deaths,
+        re.compile("[\\w\\s]+ total death"): data.get_total_deaths,
+        re.compile("total death [\\w\\s]+"): data.get_total_deaths,
+        re.compile("total death"): data.get_total_deaths,
+        re.compile("[\\w\\s]+ recovered [\\w\\s]+"): data.get_total_recovered,
+        re.compile("[\\w\\s]+ total recovered"): data.get_total_recovered,
+        re.compile("total recovered [\\w\\s]+"): data.get_total_recovered,
+        re.compile("total recovered"): data.get_total_recovered,
+        re.compile("[\\w\\s]+ death [\\w\\s]+"): data.get_total_recovered
     }
     while True:
         print('Listening.....')
         text = get_audio()
+        print(text)
+        result = None
+        for pattern, func in TOTAL_PATTERNS.items():
+            # print(pattern.match(text))
+            if pattern.match(text):
+                result = func()
+                break
+
+        if result:
+            print(result)
+            speak(result)
 
         if text.find(END_PHRASE) != -1:
             print('Exit')
             break
 
+
+main()
+
+
 # print(get_audio())
 # speak('Hello Tushar and tanishq')
-data = Data(API_KEY, PROJECT_TOKEN)
-print(data.data)
+# data = Data(API_KEY, PROJECT_TOKEN)
+# print(data.data)
 # print(data.data)
 # print(data.get_total_cases())
 # print(data.get_total_deaths())
