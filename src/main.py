@@ -82,6 +82,8 @@ def main():
     print("Started")
     data = Data(API_KEY, PROJECT_TOKEN)
     END_PHRASE = 'stop'
+    country_names = data.get_country_names()
+
     TOTAL_PATTERNS = {
         re.compile("[\\w\\s]+ total [\\w\\s]+ cases"): data.get_total_cases,
         re.compile("[\\w\\s]+ total cases"): data.get_total_cases,
@@ -99,20 +101,34 @@ def main():
         re.compile("total recovered"): data.get_total_recovered,
         re.compile("[\\w\\s]+ death [\\w\\s]+"): data.get_total_recovered
     }
+
     COUNTRY_PATTERNS = {
         re.compile("[\\w\\s]+ cases [\\w\\s]+"): lambda country: data.get_country_data(country)['total_cases'],
         re.compile("[\\w\\s]+ deaths [\\w\\s]+"): lambda country: data.get_country_data(country)['total_deaths'],
         re.compile("[\\w\\s]+ recovered [\\w\\s]+"): lambda country: data.get_country_data(country)['total_recovered']
     }
+
     while True:
         print('Listening.....')
         text = get_audio()
         print(text)
         result = None
-        for pattern, func in TOTAL_PATTERNS.items():
+        choice = 1
+        for pattern, func in COUNTRY_PATTERNS.items():
             if pattern.match(text):
-                result = func()
+                words = set(text.split(" "))
+                for word in words:
+                    if word in country_names:
+                        result = func(word)
+                        choice = 0
+                        break
                 break
+
+        if choice == 1:
+            for pattern, func in TOTAL_PATTERNS.items():
+                if pattern.match(text):
+                    result = func()
+                    break
 
         if result:
             print(result)
@@ -122,7 +138,8 @@ def main():
             print('Exit')
             break
 
-# main()
+
+main()
 
 
 # print(get_audio())
