@@ -47,6 +47,13 @@ class Data:
             if country['name'].lower() == name.lower():
                 return country
 
+    def get_country_names(self):
+        countries = self.data['country']
+        country_names = []
+        for country in countries:
+            country_names.append(country['name'].lower())
+        return country_names
+
 
 def speak(text):
     engine = pyttsx3.init()
@@ -107,8 +114,7 @@ def main():
             print('Exit')
             break
 
-
-main()
+# main()
 
 
 # print(get_audio())
