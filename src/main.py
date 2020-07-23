@@ -74,6 +74,10 @@ def get_audio():
         return said.lower()
 
 
+# data = Data(API_KEY, PROJECT_TOKEN)
+# print(data.get_country_data('India'))
+
+
 def main():
     print("Started")
     data = Data(API_KEY, PROJECT_TOKEN)
@@ -95,13 +99,17 @@ def main():
         re.compile("total recovered"): data.get_total_recovered,
         re.compile("[\\w\\s]+ death [\\w\\s]+"): data.get_total_recovered
     }
+    COUNTRY_PATTERNS = {
+        re.compile("[\\w\\s]+ cases [\\w\\s]+"): lambda country: data.get_country_data(country)['total_cases'],
+        re.compile("[\\w\\s]+ deaths [\\w\\s]+"): lambda country: data.get_country_data(country)['total_deaths'],
+        re.compile("[\\w\\s]+ recovered [\\w\\s]+"): lambda country: data.get_country_data(country)['total_recovered']
+    }
     while True:
         print('Listening.....')
         text = get_audio()
         print(text)
         result = None
         for pattern, func in TOTAL_PATTERNS.items():
-            # print(pattern.match(text))
             if pattern.match(text):
                 result = func()
                 break
