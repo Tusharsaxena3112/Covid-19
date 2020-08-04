@@ -3,6 +3,9 @@ import json
 import pyttsx3
 import speech_recognition as sr
 import re
+import threading
+import time
+
 
 API_KEY = 'tesSpQOvJQ4h'
 PROJECT_TOKEN = 'tiO63kghSOtt'
@@ -16,12 +19,13 @@ class Data:
         self.params = {
             'api_key': api_key
         }
-        self.get_data()
+        self.data = self.get_data()
 
     def get_data(self):
         response = requests.get(f'https://www.parsehub.com/api/v2/projects/{self.project_token}/last_ready_run/data',
                                 params={'api_key': self.api_key})
-        self.data = json.loads(response.text)
+        data = json.loads(response.text)
+        return data
 
     def get_total_cases(self):
         totals = self.data['total']
@@ -53,6 +57,24 @@ class Data:
         for country in countries:
             country_names.append(country['name'].lower())
         return country_names
+
+    def update_data(self):
+        response = requests.post(f'https://www.parsehub.com/api/v2/projects/{self.project_token}/run',
+                                 params=self.params)
+
+        def poll():
+            time.sleep(0.1)
+            old_data = self.data
+            while True:
+                new_data = self.get_data()
+                if new_data != old_data:
+                    self.data = new_data
+                    print("Data updated")
+                    break
+                time.sleep(5)
+
+        t = threading.Thread(target=poll)
+        t.start()
 
 
 def speak(text):
@@ -90,57 +112,60 @@ def main():
         re.compile("[\\w\\s]+ total cases [\\w\\s]+"): data.get_total_cases,
         re.compile("total cases [\\w\\s]+"): data.get_total_cases,
         re.compile("total cases"): data.get_total_cases,
-        re.compile("[\\w\\s]+ death [\\w\\s]+"): data.get_total_deaths,
-        re.compile("[\\w\\s]+ total [\\w\\s]+ death"): data.get_total_deaths,
-        re.compile("[\\w\\s]+ total death"): data.get_total_deaths,
-        re.compile("total death [\\w\\s]+"): data.get_total_deaths,
-        re.compile("total death"): data.get_total_deaths,
-        re.compile("[\\w\\s]+ recovered [\\w\\s]+"): data.get_total_recovered,
+        re.compile("[\\w\\s]+ total deaths [\\w\\s]+"): data.get_total_deaths,
+        re.compile("[\\w\\s]+ total [\\w\\s]+ deaths"): data.get_total_deaths,
+        re.compile("[\\w\\s]+ total deaths"): data.get_total_deaths,
+        # re.compile("total death [\\w\\s]+"): data.get_total_deaths,
+        re.compile("total deaths"): data.get_total_deaths,
+        re.compile("[\\w\\s]+  total recovered [\\w\\s]+"): data.get_total_recovered,
         re.compile("[\\w\\s]+ total recovered"): data.get_total_recovered,
-        re.compile("total recovered [\\w\\s]+"): data.get_total_recovered,
+        # re.compile("total recovered [\\w\\s]+"): data.get_total_recovered,
         re.compile("total recovered"): data.get_total_recovered,
-        re.compile("[\\w\\s]+ death [\\w\\s]+"): data.get_total_recovered
+        re.compile("[\\w\\s]+ total death [\\w\\s]+"): data.get_total_deaths
     }
 
     COUNTRY_PATTERNS = {
         re.compile("[\\w\\s]+ cases [\\w\\s]+"): lambda country: data.get_country_data(country)['total_cases'],
         re.compile("[\\w\\s]+ deaths [\\w\\s]+"): lambda country: data.get_country_data(country)['total_deaths'],
-        re.compile("[\\w\\s]+ recovered [\\w\\s]+"): lambda country: data.get_country_data(country)['total_recovered']
+        re.compile("[\\w\\s]+ recovered [\\w\\s]+"): lambda country: data.get_country_data(country)[
+            'total_recovered']
     }
+
+    UPDATE_COMMAND = "update"
 
     while True:
         print('Listening.....')
         text = get_audio()
         print(text)
         result = None
-        choice = 1
         for pattern, func in COUNTRY_PATTERNS.items():
             if pattern.match(text):
                 words = set(text.split(" "))
                 for word in words:
                     if word in country_names:
                         result = func(word)
-                        choice = 0
                         break
                 break
 
-        if choice == 1:
-            for pattern, func in TOTAL_PATTERNS.items():
-                if pattern.match(text):
-                    result = func()
-                    break
+        for pattern, func in TOTAL_PATTERNS.items():
+            if pattern.match(text):
+                result = func()
+                break
 
-        if result:
-            print(result)
-            speak(result)
+        if text == UPDATE_COMMAND:
+            result = "Data is being updated. This may take a moment!"
+            data.update_data()
 
         if text.find(END_PHRASE) != -1:
             print('Exit')
             break
 
+        if result:
+            speak(result)
+            print(result)
+
 
 main()
-
 
 # print(get_audio())
 # speak('Hello Tushar and tanishq')
