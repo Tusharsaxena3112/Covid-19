@@ -1,0 +1,52 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.body{
+    margin:10px;
+}
+.heading{
+    background-color: rgb(218, 218, 221);
+    color:black;
+    /* float: right; */
+    height: 15vh;
+    display: flex;
+}
+.heading .menu { 
+    position: absolute;
+    padding:10px;
+    color:black;
+    font-size:25px;
+    margin:15px;
+    line-height: 10vh;
+    right:0;
+}
+.logo{
+    margin:10px;
+}
+.logo img{
+    color:black;
+    width:70px;
+}
+
+.logo img:hover{
+    width:80px;
+    transition:1s;
+}
+
+.menu li{
+    display: inline;
+}
+
+.menu li a{
+    margin:5px;
+    text-decoration: none;
+    color:black;
+}
+
+.menu li a:hover{
+    color:white;
+    transition:.5s
+}
