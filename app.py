@@ -8,5 +8,10 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/precautions')
+def precautions():
+    return render_template('precautions.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
