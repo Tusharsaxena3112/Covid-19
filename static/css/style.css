@@ -17,13 +17,35 @@ h1 {
 }
 
 .heading {
-    /* background-color: rgb(218, 218, 221); */
-    /* float: right; */
     height: 15vh;
     display: flex;
+    position: sticky;
+    top: 0;
+    background-color: rgb(165, 188, 252);
 }
 
+.heading-transparent {
+    height: 15vh;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: transparent;
+}
+
+
+
 .heading .menu {
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    margin: 15px;
+    line-height: 10vh;
+    right: 0;
+    font-family: 'Lobster Two', cursive;
+}
+
+.heading-transparent .menu {
     position: absolute;
     padding: 10px;
     font-size: 25px;
@@ -148,5 +170,18 @@ h1 {
     font-size: 20px;
     padding: 50px;
     text-align: justify;
+}
 
+.interactive-chart {
+    margin: 40px auto;
+    width: 90%;
+    border: 2px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.chart {
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius: 20px;
+    padding: 10px;
 }

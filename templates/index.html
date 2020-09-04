@@ -17,7 +17,7 @@
           rel="stylesheet">
 </head>
 <body>
-<div class="heading">
+<div class="heading-transparent" id='mynav'>
     <div class="logo">
         <img alt="" src="../static/images/virus-1.svg"/>
     </div>
@@ -94,6 +94,16 @@
             traction on social media platforms.
         </p>
     </div>
+    <div class="chart">
+        <div class="interactive-chart">
+            <iframe height="600px" src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map"
+                    width="100%"></iframe>
+        </div>
+        <div class="interactive-chart">
+            <iframe src="https://ourworldindata.org/grapher/covid-confirmed-cases-since-100th-case?country=USA+ESP+ITA+KOR+TWN+GBR+NOR"
+                    style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        </div>
+    </div>
 </body>
-<script src="./js/video-speed.js"></script>
+<script src="../static/js/nav.js"></script>
 </html>
