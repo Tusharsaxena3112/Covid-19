@@ -22,6 +22,7 @@ h1 {
     position: sticky;
     top: 0;
     background-color: rgb(165, 188, 252);
+    border-radius: 5px;
 }
 
 .heading-transparent {
@@ -30,6 +31,7 @@ h1 {
     position: sticky;
     top: 0;
     background: transparent;
+    border-radius: 5px;
 }
 
 
