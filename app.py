@@ -10,7 +10,7 @@ def index():
 
 @app.route('/precautions')
 def precautions():
-    return render_template('precautions.html')
+    return render_template('Precautions1.html')
 
 
 if __name__ == '__main__':
