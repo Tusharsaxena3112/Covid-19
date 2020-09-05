@@ -13,5 +13,20 @@ def precautions():
     return render_template('Precautions1.html')
 
 
+@app.route('/tracker')
+def tracker():
+    return render_template('tracker.html')
+
+
+@app.route('/news')
+def news():
+    return render_template('news.html')
+
+
+@app.route('/medi-care')
+def medi_care():
+    return render_template('medi-care.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

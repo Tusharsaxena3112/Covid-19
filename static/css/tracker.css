@@ -21,3 +21,84 @@
     font-size:50px;
    border-bottom:1px solid black
 }
+
+.latest-report {
+    margin: 10px;
+    background-color: rgb(243, 240, 235);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30vh;
+    font-size: 25px;
+}
+
+.country {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px grey;
+}
+
+.name {
+    font-size: 50px;
+}
+
+.total-cases {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(107, 105, 228);
+}
+
+.title {
+    font-size: 35px;
+}
+
+.recovered-cases {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(90, 245, 137);
+}
+
+.total-deaths {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(247, 107, 107);
+}
+
+.total-cases .value {
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+}
+
+.recovered-cases .value {
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+}
+
+.total-deaths .value {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+.change-btn {
+    cursor: pointer;
+}
+
+.input {
+    text-align: center;
+    margin: 50px;
+}
+
+.input input {
+    size: 100px;
+    height: 5vh;
+    font-size: 30px;
+    box-shadow: 5px 5px 5px 5px grey;
+}
