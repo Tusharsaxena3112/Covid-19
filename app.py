@@ -20,7 +20,7 @@ def tracker():
 
 @app.route('/news')
 def news():
-    return render_template('news.html')
+    return render_template('News.html')
 
 
 @app.route('/medi-care')
