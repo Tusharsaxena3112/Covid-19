@@ -1,61 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Tracker</title>
-    <link href="../static/css/style.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../static/css/tracker.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Rufina&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Overlock&family=Rufina&display=swap"
-          rel="stylesheet">
-</head>
-<body>
-    <div class="heading" id='mynav'>
-    <div class="logo">
-        <img alt="" src="../static/images/virus-1.svg"/>
-    </div>
-    <ul class="menu">
+    <link href="../static/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/tracker.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Rufina&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Overlock&family=Rufina&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="heading" id="mynav">
+      <div class="logo">
+        <img alt="" src="../static/images/virus-1.svg" />
+      </div>
+      <ul class="menu">
         <li><a href="">Home</a></li>
         <li><a href="/tracker">Tracker</a></li>
         <li><a href="">News</a></li>
         <li><a href="/precautions">Precautions</a></li>
         <li><a href="">Medi-Care</a></li>
-    </ul>
-</div>
-<div class="banner-img">
-    <div class="banner-content">
+      </ul>
+    </div>
+    <div class="banner-img">
+      <div class="banner-content">
         <h2>Track Your Country!</h2>
-    </div>  
-</div>
-<div class="input-section">
-    <div class="latest-report">
+      </div>
+    </div>
+    <div class="input-section">
+      <div class="latest-report">
         <div class="country">
-            <div class="name">Loading...</div>
-            <div class="change-btn">Change</div>
-            <div class="country-search">
-                <div class="search-box">
-                    <input type="text" id="search-input" placeholder="Search your Country">
-                    
-                </div>
+          <div class="name">Loading...</div>
+          <div class="change-btn">Change</div>
+          <div class="country-search hide">
+              <!-- we will remove this hide class by using javsacript -->
+            <div class="search-box ">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search your Country"
+              />
+              <i class="fa fa-times close"></i>
             </div>
+            <div class="country-list">
+                <!-- Countries we add from javascript -->
+            </div>
+          </div>
         </div>
         <div class="total-cases">
-            <div class="title">Total-Cases</div>
-            <div class="value">0</div>
-            <div class="new-value">+0</div>
+          <div class="title">Total-Cases</div>
+          <div class="value">0</div>
+          <div class="new-value">+0</div>
         </div>
         <div class="recovered-cases">
-            <div class="title">Recovered-Cases</div>
-            <div class="value">0</div>
-            <div class="new-value">+0</div>
+          <div class="title">Recovered-Cases</div>
+          <div class="value">0</div>
+          <div class="new-value">+0</div>
         </div>
         <div class="total-deaths">
-            <div class="title">Total-Deaths</div>
-            <div class="value">0</div>
-            <div class="new-value">+0</div>
+          <div class="title">Total-Deaths</div>
+          <div class="value">0</div>
+          <div class="new-value">+0</div>
         </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
