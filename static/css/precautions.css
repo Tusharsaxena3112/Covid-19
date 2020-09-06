@@ -45,7 +45,7 @@
 #box2,#box3{
     width: 100%;
     height: auto;
-    background-color: chocolate;
+    background-color: rgb(224, 173, 137);
 }
 #box2 h1{
     text-align: center;
