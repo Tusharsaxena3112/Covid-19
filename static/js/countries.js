@@ -206,9 +206,9 @@ let country_list = [
 ];
 
 // SELECT SEARCH COUNTRY ELEMENTS
-const search_country_element = document.querySelector(".search-country");
+const search_country_element = document.querySelector(".country-search");
 const country_list_element = document.querySelector(".country-list");
-const chang_country_btn = document.querySelector(".change-country");
+const chang_country_btn = document.querySelector(".change-btn");
 const close_list_btn = document.querySelector(".close");
 const input = document.getElementById('search-input')
 
