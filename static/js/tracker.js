@@ -48,7 +48,7 @@ async function fetchData(userCountry) {
         return res.json();
     })
     .then(data=>{
-        
+        console.log(data);
     })
 }
 
