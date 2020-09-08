@@ -24,7 +24,7 @@ country_list.forEach(country => {
         userCountry = country.name;
     }
 });
-async function fetchData(userCountry) {
+async function fetchCountryData(userCountry) {
     let url = `https://covid19.mathdro.id/api/countries/${userCountry}`;
     await fetch(url)
     .then(res=>{
@@ -35,5 +35,19 @@ async function fetchData(userCountry) {
     })
 }
 
-fetchData(userCountry);
+// fetchCountryData(userCountry);
+
+async function fetchWorldData() {
+    let url = `https://covid19.mathdro.id/api/`;
+    await fetch(url)
+    .then(res=>{
+        return res.json();
+    })
+    .then(data=>{
+        console.log(data);
+    })
+}
+
+fetchWorldData();
+
 
