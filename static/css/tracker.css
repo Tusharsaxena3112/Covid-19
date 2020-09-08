@@ -82,7 +82,8 @@ h1{
 }
 
 .name {
-    font-size: 50px;
+    font-size: 35px;
+    font-weight: bolder;
 }
 
 .total-cases {
@@ -94,6 +95,7 @@ h1{
 
 .title {
     font-size: 35px;
+    font-weight: bolder;
 }
 
 .recovered-cases {
