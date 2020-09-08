@@ -23,6 +23,8 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
   </head>
   <body>
     <div class="heading" id="mynav">
@@ -45,29 +47,20 @@
     <h1>World Statistics!</h1>
     <div class="overall-data-section">
       <div class="overall-confirmed">
-        <div class="title">
-          Total-Confirmed
-        </div>
-        <div class="value">
-          0
-        </div>
+        <div class="title">Total-Confirmed</div>
+        <div class="value">0</div>
       </div>
       <div class="overall-recovered">
-        <div class="title">
-          Total Recovered
-        </div>
-        <div class="value">
-          0
-        </div>
+        <div class="title">Total Recovered</div>
+        <div class="value">0</div>
       </div>
       <div class="overall-deaths">
-        <div class="title">
-          Total Deaths
-        </div>
-        <div class="value">
-          0
-        </div>
+        <div class="title">Total Deaths</div>
+        <div class="value">0</div>
       </div>
+    </div>
+    <div class="pie-chart">
+      <canvas id="chart-container"> </canvas>
     </div>
     <h1>Check Your Country</h1>
     <div class="input-section">
@@ -112,11 +105,26 @@
     </div>
   </body>
   <script
-          language="JavaScript"
-          src="http://www.geoplugin.net/javascript.gp"
-          type="text/javascript"
+    language="JavaScript"
+    src="http://www.geoplugin.net/javascript.gp"
+    type="text/javascript"
   ></script>
   <script src="../static/js/countries.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
   <script src="../static/js/tracker.js"></script>
-
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
 </html>

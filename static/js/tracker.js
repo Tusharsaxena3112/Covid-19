@@ -13,6 +13,10 @@ let appData = [],
     recovered = [],
     deaths = [],
     dates = [];
+    total_confirmed_world=0;
+    total_recovered_world=0;
+    total_deaths_world=0;
+    data_world={};
 
 //   Getting Location of User
 
@@ -37,17 +41,34 @@ async function fetchCountryData(userCountry) {
 
 // fetchCountryData(userCountry);
 
-async function fetchWorldData() {
+function fetchWorldData() {
     let url = `https://covid19.mathdro.id/api/`;
-    await fetch(url)
+     fetch(url)
     .then(res=>{
         return res.json();
-    })
-    .then(data=>{
-        console.log(data);
+    }).then(data=>{
+        total_confirmed_world = data['confirmed']['value'];
+        total_recovered_world=data['recovered']['value'];
+        total_deaths_world=data['deaths']['value'];
+        appData.push(total_confirmed_world);
+        appData.push(total_recovered_world);
+        appData.push(total_deaths_world);
     })
 }
-
-fetchWorldData();
-
-
+fetchWorldData(setTimeout=3000);
+console.log(appData)
+const ctx = document.getElementById('chart-container').getContext('2d')
+let myChart = new Chart(ctx,{
+    type:'pie',
+    data:{
+        labels:['Confirmed','Recovered','Deaths'],
+        datasets:[
+            {
+             label:'',
+             data:appData,
+             backgroundColor:['blue','green','red'],
+             borderWidth:1   
+            }
+        ]
+    }
+})
