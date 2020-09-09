@@ -1,0 +1,11 @@
+.news-box{
+    background:blue;
+    border:1px solid;
+
+}
+
+.news-box h1{
+    font-size:50px;
+    color:white;
+    text-align: center;
+}
