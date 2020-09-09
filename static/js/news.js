@@ -20,9 +20,9 @@ function hideloader(){
 function show(data){
     let tab =
         <tr>
-            <td>img</td>
-            <td>link</td>
-            <td>title</td>
+            <th>img</th>
+            <th>link</th>
+            <th>title</th>
         </tr>;
 
     for (let r of data.list){
