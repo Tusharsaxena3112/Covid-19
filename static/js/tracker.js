@@ -47,6 +47,7 @@ function fetchWorldData() {
       appData.push(total_confirmed_world);
       appData.push(total_recovered_world);
       appData.push(total_deaths_world);
+      console.log(appData);
     });
 }
 fetchWorldData();
@@ -62,7 +63,7 @@ let myChart = new Chart(ctx, {
         label: "",
         data: appData,
         backgroundColor: ["#311cfd", "#31fb2a", "#fb0c2a"],
-        borderWidth: 1,
+        borderWidth: 3,
       },
     ],
   },
@@ -71,8 +72,5 @@ function updateStats(){
     // console.log(total_confirmed_world)
     // country.innerHTML = userCountry;
     // totalcases.innerHTML = 235465768 || 0;
-
-    
-
 }
 updateStats();
