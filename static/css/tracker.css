@@ -5,7 +5,7 @@
 }
 body{
     margin:20px;
-    background-color: blanchedalmond;
+    background-color: rgb(252, 249, 246);
 }
 .banner-img{
     /* border:1px solid black; */
@@ -244,6 +244,14 @@ h1{
 
 .hide{
     display:none;
+}
+
+.pie-chart{
+    border:1px solid;
+    margin:50px;
+    padding:20px;
+    background:white;
+    box-shadow: 1px 1px 1px 1px black;;
 }
 
 
