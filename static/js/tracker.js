@@ -41,20 +41,16 @@ function fetchWorldData() {
       return res.json();
     })
     .then((data) => {
-      total_confirmed_world = data["confirmed"]["value"];
-      total_recovered_world = data["recovered"]["value"];
-      total_deaths_world = data["deaths"]["value"];
+      total_confirmed_world = parseInt(data["confirmed"]["value"]);
+      total_recovered_world = parseInt(data["recovered"]["value"]);
+      total_deaths_world = parseInt(data["deaths"]["value"]);
       appData.push(total_confirmed_world);
       appData.push(total_recovered_world);
       appData.push(total_deaths_world);
-      cases.push(total_confirmed_world);
-      recovered.push(total_recovered_world);
-      deaths.push(total_deaths_world);
-
     });
 }
 fetchWorldData();
-
+console.log(appData[0]);
 //Adding Pie Chart
 const ctx = document.getElementById("chart-container").getContext("2d");
 let myChart = new Chart(ctx, {
@@ -73,7 +69,10 @@ let myChart = new Chart(ctx, {
 });
 function updateStats(){
     // console.log(total_confirmed_world)
-    country.innerHTML = userCountry;
-    totalcases.innerHTML =cases || 0;
+    // country.innerHTML = userCountry;
+    // totalcases.innerHTML = 235465768 || 0;
+
+    
+
 }
 updateStats();
