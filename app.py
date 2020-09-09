@@ -10,7 +10,22 @@ def index():
 
 @app.route('/precautions')
 def precautions():
-    return render_template('precautions.html')
+    return render_template('Precautions1.html')
+
+
+@app.route('/tracker')
+def tracker():
+    return render_template('tracker.html')
+
+
+@app.route('/news')
+def news():
+    return render_template('News.html')
+
+
+@app.route('/medi-care')
+def medi_care():
+    return render_template('medi-care.html')
 
 
 if __name__ == '__main__':

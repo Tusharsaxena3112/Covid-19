@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="../static/css/new.css">
+    <script type="text/javascript" src="/static/js/news.js"></script>
+</head>
+<body>
+    <table id='id01'>
+        <tr>
+            <th>img</th>
+            <th>link</th>
+            <th>title</th>
+        </tr>
+        <tr w3-repeat='news'>
+            <td>{{img}}</td>
+            <td>{{link}}</td>
+            <td>{{title}}</td>
+        </tr>
+    </table>
+    <script>
+        w3.displayobject('id01',)
+    </script>
+</body>
+<script src="../static/js/news.js"></script>
+</html>

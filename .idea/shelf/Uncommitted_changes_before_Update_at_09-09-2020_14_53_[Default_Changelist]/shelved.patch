@@ -1,0 +1,58 @@
+Index: static/js/news.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const api_url = \"https://cryptic-ravine-96718.herokuapp.com/\";\r\n\r\nasync function getapi(url){\r\n    const response = await fetch(url);\r\n\r\n    var data = await response.json();\r\n    console.log(data);\r\n    if(response){\r\n        hideloader();\r\n    }\r\n    show(data);\r\n}\r\n\r\ngetapi(api_url);
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- static/js/news.js	(revision 74841e37e9f46fa8be5009655807b445aa675418)
++++ static/js/news.js	(date 1599643293548)
+@@ -11,4 +11,26 @@
+     show(data);
+ }
+ 
+-getapi(api_url);
+\ No newline at end of file
++getapi(api_url);
++
++function hideloader(){
++    document.getElementById('news').style.display = 'none';
++}
++
++function show(data){
++    let tab =
++        <tr>
++            <td>img</td>
++            <td>link</td>
++            <td>title</td>
++        </tr>;
++
++    for (let r of data.list){
++        tab += `<tr>
++        <td>${r.img}</td>
++        <td>${r.link}</td>
++        <td>${r.title}</td>
++        </tr>`
++    }
++    document.getElementById("news").innerHTML = tab;
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"JavaScriptSettings\">\r\n    <option name=\"languageLevel\" value=\"ES6\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.8\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 74841e37e9f46fa8be5009655807b445aa675418)
++++ .idea/misc.xml	(date 1599643389290)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="JavaScriptSettings">
+-    <option name="languageLevel" value="ES6" />
++    <option name="languageLevel" value="JSX" />
+   </component>
+   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
