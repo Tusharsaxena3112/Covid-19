@@ -1,9 +1,6 @@
 let country = document.querySelector(".country .name");
-let totalcases = document.querySelector(".total-cases .value");
-let newCases = document.querySelector(".total-cases .new-value");
-let recoveredCases = document.querySelector(".recovered-cases value");
-let newRecovered = document.querySelector(".recovered-cases .new-value");
-let totaldeaths = document.querySelector(".total-deaths .value");
+
+
 let newDeaths = document.querySelector(".total-deaths .new-value");
 
 // App variables
@@ -41,17 +38,25 @@ function fetchWorldData() {
       return res.json();
     })
     .then((data) => {
-      total_confirmed_world = parseInt(data["confirmed"]["value"]);
-      total_recovered_world = parseInt(data["recovered"]["value"]);
-      total_deaths_world = parseInt(data["deaths"]["value"]);
-      appData.push(total_confirmed_world);
-      appData.push(total_recovered_world);
-      appData.push(total_deaths_world);
-      console.log(appData);
+      console.log(data);
+      appData.push(data['confirmed']['value']);
+      appData.push(data['recovered']['value']);
+      appData.push(data['deaths']['value']);
+      appendData(data);
     });
 }
+
+function appendData(data){
+  var totalcases = document.querySelector(".overall-confirmed .value");
+  var recoveredCases = document.querySelector(".overall-recovered .value");
+  let totaldeaths = document.querySelector(".overall-deaths .value");
+  totalcases.innerHTML = data['confirmed']['value']; 
+  recoveredCases.innerHTML = data['recovered']['value'];
+  totaldeaths.innerHTML  = data['deaths']['value'];
+  
+}
 fetchWorldData();
-console.log(appData[0]);
+
 //Adding Pie Chart
 const ctx = document.getElementById("chart-container").getContext("2d");
 let myChart = new Chart(ctx, {
@@ -68,9 +73,3 @@ let myChart = new Chart(ctx, {
     ],
   },
 });
-function updateStats(){
-    // console.log(total_confirmed_world)
-    // country.innerHTML = userCountry;
-    // totalcases.innerHTML = 235465768 || 0;
-}
-updateStats();
