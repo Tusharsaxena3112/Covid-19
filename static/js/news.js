@@ -1,30 +1,30 @@
- api_url = "https://cryptic-ravine-96718.herokuapp.com/";
 
-
-
-var fulldata = async function getapi(url){
-    const response = await fetch(url);
-
-    const data = await response.json();
-    console.log(data);
-    return data;
+ async function getapi(){
+    url = "https://cryptic-ravine-96718.herokuapp.com/";
+    await fetch(url)
+    .then(res=>{
+        // console.log(res.json());
+        return res.json();
+    })
+    .then(data=>{
+        console.log(data['news']);
+        appendData(data['news']);
+    })
 }
+getapi();
 
-// console.log(app_data);
-// function show(data){
-//     let tab =
-//         <tr>
-//             <th>img</th>
-//             <th>link</th>
-//             <th>title</th>
-//         </tr>;
-//
-//     for (let r of data.list){
-//         tab += `<tr>
-//         <td>${r.img}</td>
-//         <td>${r.link}</td>
-//         <td>${r.title}</td>
-//         </tr>`
-//     }
-//     document.getElementById("news").innerHTML = tab;
-// }
+
+
+
+
+function appendData(data){
+    var newsElement = document.getElementById('news');
+    data.forEach(element => {
+        newsElement.innerHTML += `
+        <div class='news-item'>
+        <div class='news-title'>${element.title}</div>
+        <div class='news-img'><img src='${element.img}'></div>
+        </div>`
+     });
+    
+}
