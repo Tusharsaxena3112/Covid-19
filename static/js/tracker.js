@@ -1,18 +1,4 @@
-let country = document.querySelector(".country .name");
-
-
-let newDeaths = document.querySelector(".total-deaths .new-value");
-
-// App variables
-
-let appData = [],
-  cases = [],
-  recovered = [],
-  deaths = [],
-  dates = [];
-
 //   Getting Location of User
-
 let countryCode = geoplugin_countryCode();
 let userCountry;
 
@@ -21,16 +7,8 @@ country_list.forEach((country) => {
     userCountry = country.name;
   }
 });
-async function fetchCountryData(userCountry) {
-  let url = `https://covid19.mathdro.id/api/countries/${userCountry}`;
-  await fetch(url)
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-    });
-}
+
+
 function fetchWorldData() {
   let url = `https://covid19.mathdro.id/api/`;
   fetch(url)
@@ -73,3 +51,21 @@ let myChart = new Chart(ctx, {
     ],
   },
 });
+
+async function fetchCountryData(userCountry) {
+  let url = `https://covid19.mathdro.id/api/countries/${userCountry}`;
+  await fetch(url)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      appendCountryData(data);
+    });
+}
+
+
+function appendCountryData(data){
+  var countryElement = document.querySelector(".country .name");
+  
+
+}
