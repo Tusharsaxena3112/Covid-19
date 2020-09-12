@@ -1,14 +1,4 @@
-//   Getting Location of User
-let countryCode = geoplugin_countryCode();
-let userCountry;
-
-country_list.forEach((country) => {
-  if (country.code == countryCode) {
-    userCountry = country.name;
-  }
-});
-
-
+let appData = [];
 function fetchWorldData() {
   let url = `https://covid19.mathdro.id/api/`;
   fetch(url)
@@ -16,22 +6,20 @@ function fetchWorldData() {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
-      appData.push(data['confirmed']['value']);
-      appData.push(data['recovered']['value']);
-      appData.push(data['deaths']['value']);
+      appData.push(data["confirmed"]["value"]);
+      appData.push(data["recovered"]["value"]);
+      appData.push(data["deaths"]["value"]);
       appendData(data);
     });
 }
 
-function appendData(data){
+function appendData(data) {
   var totalcases = document.querySelector(".overall-confirmed .value");
   var recoveredCases = document.querySelector(".overall-recovered .value");
   let totaldeaths = document.querySelector(".overall-deaths .value");
-  totalcases.innerHTML = data['confirmed']['value']; 
-  recoveredCases.innerHTML = data['recovered']['value'];
-  totaldeaths.innerHTML  = data['deaths']['value'];
-  
+  totalcases.innerHTML = data["confirmed"]["value"];
+  recoveredCases.innerHTML = data["recovered"]["value"];
+  totaldeaths.innerHTML = data["deaths"]["value"];
 }
 fetchWorldData();
 
@@ -52,6 +40,15 @@ let myChart = new Chart(ctx, {
   },
 });
 
+//   Getting Location of User
+let countryCode = geoplugin_countryCode();
+let userCountry;
+country_list.forEach((country) => {
+  if (country.code == countryCode) {
+    userCountry = country.name;
+  }
+});
+
 async function fetchCountryData(userCountry) {
   let url = `https://covid19.mathdro.id/api/countries/${userCountry}`;
   await fetch(url)
@@ -59,13 +56,19 @@ async function fetchCountryData(userCountry) {
       return res.json();
     })
     .then((data) => {
+      console.log(data);
       appendCountryData(data);
     });
 }
+fetchCountryData(userCountry);
 
-
-function appendCountryData(data){
+function appendCountryData(data) {
+  var country_total_cases = document.querySelector('.total-cases .value');
+  var country_recovered_cases = document.querySelector('.recovered-cases .value');
+  var country_deaths = document.querySelector('.total-deaths .value');
   var countryElement = document.querySelector(".country .name");
-  
-
+  countryElement.innerHTML = userCountry;
+  country_total_cases.innerHTML = data['confirmed']['value'];
+  country_recovered_cases.innerHTML = data['recovered']['value'];
+  country_deaths.innerHTML = data['deaths']['value'];
 }
