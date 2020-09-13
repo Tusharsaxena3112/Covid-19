@@ -42,6 +42,22 @@ let myChart = new Chart(ctx, {
     ],
   },
 });
+
+const worldBar = document.getElementById("bar-chart-container").getContext("2d");
+let myWorldBarChart = new Chart(worldBar, {
+  type: 'bar',
+  data: {
+    labels: ["Confirmed", "Recovered", "Deaths"],
+    datasets: [
+      {label:'World Statistics',
+        data: appData,
+        borderWidth:'1',
+        borderColor:'black',
+        backgroundColor:['rgb(14, 94, 253,0.4)','rgb(3, 249, 104,0.4)','rgb(252, 94, 104,0.4)']
+      },
+    ],
+  },
+});
 }
 
 
