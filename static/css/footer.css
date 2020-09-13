@@ -7,6 +7,51 @@
 footer {
     width: 100%;
     
-    /* background-color: rgb(165, 188, 252); */
-    background-color: darkred;
+    background-color: rgb(92, 92, 92);
+
+}
+.sec-1{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 15px;
+
+}
+.about{
+    width: 40%;
+
+}
+.sec-1 h2{
+   font-size:23px ;
+   font-family: "Zilla Slab", serif;
+   color: white;
+}
+.about p {
+    text-align: justify;
+    color: rgb(165, 188, 252);
+    line-height: 24px;
+    margin-top: 10px;
+}
+.sec-1 ul{
+    list-style: none;
+
+}
+.sec-1 ul li{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: rgb(165, 188, 252);
+   
+}
+a:hover{
+    color: rgb(255, 255, 255);
+}
+i{
+    color:rgb(74, 115, 226);
+}
+i:hover{
+    color: white;
+    cursor: pointer;
 }
