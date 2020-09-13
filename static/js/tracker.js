@@ -95,7 +95,7 @@ let myCountrylineChart = new Chart(line, {
         data: countryData,
         borderColor:'black',
         borderWidth:'0.5',
-        backgroundColor:'rgb(246, 254, 0,0.5)'
+        backgroundColor:'rgb(253, 254, 0,0.3)'
       },
     ],
   },
