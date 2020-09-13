@@ -72,6 +72,7 @@ body{
 }
 
 .total-cases .value {
+<<<<<<< HEAD
     font-size: 30px;
     font-weight: bold;
     color: blue;
@@ -87,6 +88,26 @@ body{
     font-size: 30px;
     font-weight: bold;
     color: red;
+=======
+  font-size: 30px;
+  font-weight: bold;
+  color:aqua;
+  padding: 10px;
+}
+
+.recovered-cases .value {
+  font-size: 30px;
+  font-weight: bold;
+  color:chartreuse;
+  padding: 10px;
+}
+
+.total-deaths .value {
+  font-size: 30px;
+  font-weight: bold;
+  color: crimson;
+  padding: 10px;
+>>>>>>> 7be4fad6ed1979b66aed5cdb961fdfb814456396
 }
 
 .change-btn {
@@ -202,6 +223,7 @@ body{
 }
 
 
+<<<<<<< HEAD
 @media (max-width:600px){
     .latest-report{
         margin-top:70px;
@@ -210,3 +232,20 @@ body{
         align-items: flex-start;
     }
 }
+=======
+.charts{
+  margin: 50px;
+  padding: 20px;
+  background: white;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+@media (max-width: 600px) {
+  .latest-report {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+>>>>>>> 7be4fad6ed1979b66aed5cdb961fdfb814456396
