@@ -23,7 +23,7 @@ function appendData(data){
         newsElement.innerHTML += `
         <div class='news-item'>
         <div class='news-title'>${element.title}</div>
-        <div class='news-img'><img src='${element.img}'></div>
+        <div class='news-img'><img src='${element.img}' width="500px"></div>
         </div>`
      });
     
