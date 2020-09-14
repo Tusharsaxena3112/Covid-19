@@ -22,8 +22,8 @@ function appendData(data){
     data.forEach(element => {
         newsElement.innerHTML += `
         <div class='news-item'>
-        <div class='news-title'>${element.title}</div>
         <div class='news-img'><img src='${element.img}' width="500px"></div>
+        <div class='news-title'>${element.title}</div>
         <div class='news-link'><a href="${element.link}" target="_blank" rel="noopener noreferrer">For Detailed Description...</a></div>
         </div>`
      });
