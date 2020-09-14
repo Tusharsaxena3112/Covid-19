@@ -24,9 +24,8 @@ body{
 }
 
 .news-title{
-    font-size: 70px;
-    text-align: center;
-    width:70%;
+    font-size: 50px;
+    text-align: left;
 }
 
 .news-items h1{
