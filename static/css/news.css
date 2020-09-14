@@ -27,12 +27,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 37%;
+    width: 30%;
 }
 
 .news-title{
-    font-size: 50px;
+    font-size: 35px;
     text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 .news-img{
