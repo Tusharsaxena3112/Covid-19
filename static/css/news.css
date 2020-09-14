@@ -16,6 +16,13 @@ body{
     margin: 10px;
     padding:10px;
 }
+.main{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    border: 1px solid;
+}
 
 .news-item{
     background:rgb(191, 191, 240);
@@ -35,8 +42,8 @@ body{
     text-align: left;
 
 }
-.news-title:hover{
-    background-color: rgb(0, 0, 0,0.5);
+.news-item:hover{
+    background-color: black;
     color: white ;
     transition: 0.5s;
 }
