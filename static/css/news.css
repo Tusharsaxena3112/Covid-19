@@ -27,7 +27,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 28%;
 }
 
 .news-title{
@@ -54,7 +54,6 @@ body{
 .news-img{
     /*border:5px white solid;*/
     margin:5px;
-    border-radius: 20px;
 }
 
 .news-img img{
