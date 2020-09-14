@@ -9,6 +9,13 @@ body{
 .news-items{
     padding:10px;
 }
+.news-items h1{
+    font-size:80px;
+    color:rgb(15, 15, 15);
+    text-align: center;
+    margin: 10px;
+    padding:10px;
+}
 
 .news-item{
     background:rgb(191, 191, 240);
@@ -26,14 +33,6 @@ body{
 .news-title{
     font-size: 50px;
     text-align: left;
-}
-
-.news-items h1{
-    font-size:80px;
-    color:rgb(15, 15, 15);
-    text-align: center;
-    margin: 10px;
-    padding:10px;
 }
 
 .news-img{
