@@ -24,7 +24,7 @@ function appendData(data){
         <div class='news-item'>
         <div class='news-title'>${element.title}</div>
         <div class='news-img'><img src='${element.img}' width="500px"></div>
-        <div class='news-link'>${element.link}</div>
+        <div class='news-link'>For Detailed Description...${element.link}</div>
         </div>`
      });
     
