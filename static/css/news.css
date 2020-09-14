@@ -33,8 +33,12 @@ body{
 .news-title{
     font-size: 35px;
     text-align: left;
+    background:rgba(0, 0, 0, 0.5);
+
+}
+.news-title:hover{
     background-color: rgba(0, 0, 0, 0.5);
-    
+    transition: 0.5s;
 }
 
 .news-img{
