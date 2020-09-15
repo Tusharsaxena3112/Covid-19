@@ -6,15 +6,7 @@
     <link href="../static/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="../static/css/tracker.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Rufina&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Overlock&family=Rufina&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:wght@200&family=Zilla+Slab:wght@300&display=swap"
       rel="stylesheet"
     />
     <link
@@ -25,6 +17,7 @@
     />
     <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
     <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   </head>
   <body>
     <div class="heading" id="mynav">
@@ -48,25 +41,28 @@
     <div class="overall-data-section">
       <div class="overall-confirmed">
         <div class="title">Total-Confirmed</div>
-        <div class="value">0</div>
+        <div class="value" style="color: aqua;">0</div>
       </div>
       <div class="overall-recovered">
         <div class="title">Total Recovered</div>
-        <div class="value">0</div>
+        <div class="value" style="color: chartreuse;">0</div>
       </div>
       <div class="overall-deaths">
         <div class="title">Total Deaths</div>
-        <div class="value">0</div>
+        <div class="value" style="color:crimson">0</div>
       </div>
     </div>
     <div class="pie-chart">
       <canvas id="chart-container"> </canvas>
     </div>
+    <div class="pie-chart">
+      <canvas id="bar-chart-container"> </canvas>
+    </div>
     <h1>Check Your Country</h1>
     <div class="input-section">
       <div class="latest-report">
         <div class="country">
-          <div class="name" id='name'>Loading..</div>
+          <div class="name" id="name">Loading..</div>
           <div class="change-btn">Change</div>
           <div class="country-search hide">
             <!-- we will remove this hide class by using javsacript -->
@@ -101,7 +97,10 @@
       </div>
     </div>
     <div class="charts">
-      <canvas id="axes-line-chart"></canvas>
+      <canvas id="line-chart"></canvas>
+    </div>
+    <div class="charts">
+      <canvas id="bar-chart"></canvas>
     </div>
   </body>
   <script

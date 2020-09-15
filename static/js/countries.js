@@ -226,7 +226,7 @@ function createCountryList(){
         }
 
         document.getElementById(`${ul_list_id}`).innerHTML += `
-            <li onclick="fetchData('${country.name}')" id="${country.name}">
+            <li onclick="fetchCountryData('${country.name}')" id="${country.name}">
             ${country.name}
             </li>
         `;

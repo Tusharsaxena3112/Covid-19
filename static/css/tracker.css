@@ -5,7 +5,7 @@
 }
 body{
     margin:20px;
-    background-color: rgb(252, 249, 246);
+    background-color: blanchedalmond;
 }
 .banner-img{
     /* border:1px solid black; */
@@ -23,47 +23,8 @@ body{
 
 .banner-img .banner-content h2{
     font-size:50px;
-    border-bottom:1px solid black
+   border-bottom:1px solid black
 }
-
-.overall-data-section{
-    margin:20px;
-    padding:10px;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top:70px;
-}
-
-.overall-confirmed,
-.overall-deaths,
-.overall-recovered{
-    margin:20px;
-    padding:20px;
-    box-shadow: 1px 1px 1px 1px rgb(36, 35, 35);
-}
-
-.overall-confirmed .value,
-.overall-deaths .value,
-.overall-recovered .value{
-    margin:10px;
-    padding:10px;
-    font-size: 50px;
-    font-weight: bolder;
-    text-align: center;
-}
-
-h1{
-    text-align:center;
-    font-size: 70px;
-    margin:20px;
-    margin-top:70px;
-}
-
-.input-section{
-    margin:20px;
-    margin-top:70px;
-}
-
 .latest-report {
     margin: 10px;
     display: flex;
@@ -76,70 +37,85 @@ h1{
 
 .country {
     margin: 10px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     padding: 10px;
-    box-shadow: 1px 1px 1px 1px grey;
+    box-shadow: 2px 2px 2px 2px grey;
 }
 
 .name {
-    font-size: 35px;
-    font-weight: bolder;
+    font-size: 50px;
 }
 
 .total-cases {
     margin: 10px;
-    /* border-radius: 10px; */
-    padding: 20px;
-    box-shadow: 1px 1px 1px 1px rgb(107, 105, 228);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(107, 105, 228);
 }
 
 .title {
     font-size: 35px;
-    font-weight: bolder;
 }
 
 .recovered-cases {
-    margin: 20px;
-    /* border-radius: 10px; */
+    margin: 10px;
+    border-radius: 10px;
     padding: 10px;
-    box-shadow: 1px 1px 1px 1px rgb(90, 245, 137);
+    box-shadow: 2px 2px 2px 2px rgb(90, 245, 137);
 }
 
 .total-deaths {
-    margin: 20px;
-    /* border-radius: 10px; */
+    margin: 10px;
+    border-radius: 10px;
     padding: 10px;
-    box-shadow: 1px 1px 1px 1px rgb(247, 107, 107);
+    box-shadow: 2px 2px 2px 2px rgb(247, 107, 107);
 }
 
 .total-cases .value {
+<<<<<<< HEAD
     font-size: 30px;
     font-weight: bold;
     color: blue;
-    padding:10px;
 }
 
 .recovered-cases .value {
     font-size: 30px;
     font-weight: bold;
     color: green;
-    padding:10px;
 }
 
 .total-deaths .value {
     font-size: 30px;
     font-weight: bold;
     color: red;
-    padding:10px;
+=======
+  font-size: 30px;
+  font-weight: bold;
+  color:aqua;
+  padding: 10px;
+}
+
+.recovered-cases .value {
+  font-size: 30px;
+  font-weight: bold;
+  color:chartreuse;
+  padding: 10px;
+}
+
+.total-deaths .value {
+  font-size: 30px;
+  font-weight: bold;
+  color: crimson;
+  padding: 10px;
+>>>>>>> 7be4fad6ed1979b66aed5cdb961fdfb814456396
 }
 
 .change-btn {
     cursor: pointer;
     background-color: tomato;
+    padding:5px;
     text-align: center;
     border-radius: 10px;
-    padding:10px;
-    margin:20px
 }
 
 .change-btn:hover{
@@ -246,15 +222,8 @@ h1{
     display:none;
 }
 
-.pie-chart{
-    border:1px solid;
-    margin:50px;
-    padding:20px;
-    background:white;
-    box-shadow: 1px 1px 1px 1px black;;
-}
 
-
+<<<<<<< HEAD
 @media (max-width:600px){
     .latest-report{
         margin-top:70px;
@@ -263,3 +232,20 @@ h1{
         align-items: flex-start;
     }
 }
+=======
+.charts{
+  margin: 50px;
+  padding: 20px;
+  background: white;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+@media (max-width: 600px) {
+  .latest-report {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+>>>>>>> 7be4fad6ed1979b66aed5cdb961fdfb814456396

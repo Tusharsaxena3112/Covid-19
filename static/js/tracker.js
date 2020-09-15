@@ -1,76 +1,147 @@
-let country = document.querySelector(".country .name");
-let totalcases = document.querySelector(".total-cases .value");
-let newCases = document.querySelector(".total-cases .new-value");
-let recoveredCases = document.querySelector(".recovered-cases value");
-let newRecovered = document.querySelector(".recovered-cases .new-value");
-let totaldeaths = document.querySelector(".total-deaths .value");
-let newDeaths = document.querySelector(".total-deaths .new-value");
-
-// App variables
-
 let appData = [],
-  cases = [],
-  recovered = [],
-  deaths = [],
-  dates = [];
-
-//   Getting Location of User
-
-let countryCode = geoplugin_countryCode();
-let userCountry;
-
-country_list.forEach((country) => {
-  if (country.code == countryCode) {
-    userCountry = country.name;
-  }
-});
-async function fetchCountryData(userCountry) {
-  let url = `https://covid19.mathdro.id/api/countries/${userCountry}`;
-  await fetch(url)
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-    });
-}
+  countryData = [];
 function fetchWorldData() {
+  appData = [];
   let url = `https://covid19.mathdro.id/api/`;
   fetch(url)
     .then((res) => {
       return res.json();
     })
     .then((data) => {
-      total_confirmed_world = parseInt(data["confirmed"]["value"]);
-      total_recovered_world = parseInt(data["recovered"]["value"]);
-      total_deaths_world = parseInt(data["deaths"]["value"]);
-      appData.push(total_confirmed_world);
-      appData.push(total_recovered_world);
-      appData.push(total_deaths_world);
-      console.log(appData);
+      appData.push(data["confirmed"]["value"]);
+      appData.push(data["recovered"]["value"]);
+      appData.push(data["deaths"]["value"]);
+      createPieChart();
+      appendData(data);
     });
 }
-fetchWorldData();
-console.log(appData[0]);
-//Adding Pie Chart
-const ctx = document.getElementById("chart-container").getContext("2d");
-let myChart = new Chart(ctx, {
-  type: "pie",
-  data: {
-    labels: ["Confirmed", "Recovered", "Deaths"],
-    datasets: [
-      {
-        label: "",
-        data: appData,
-        backgroundColor: ["#311cfd", "#31fb2a", "#fb0c2a"],
-        borderWidth: 3,
-      },
-    ],
-  },
-});
-function updateStats(){
-    // console.log(total_confirmed_world)
-    // country.innerHTML = userCountry;
-    // totalcases.innerHTML = 235465768 || 0;
+
+function appendData(data) {
+  var totalcases = document.querySelector(".overall-confirmed .value");
+  var recoveredCases = document.querySelector(".overall-recovered .value");
+  let totaldeaths = document.querySelector(".overall-deaths .value");
+  totalcases.innerHTML = data["confirmed"]["value"];
+  recoveredCases.innerHTML = data["recovered"]["value"];
+  totaldeaths.innerHTML = data["deaths"]["value"];
 }
-updateStats();
+fetchWorldData();
+
+//Adding Pie Chart
+function createPieChart() {
+  const ctx = document.getElementById("chart-container").getContext("2d");
+  let myChart = new Chart(ctx, {
+    type: "pie",
+    data: {
+      labels: ["Confirmed", "Recovered", "Deaths"],
+      datasets: [
+        {
+          label: "",
+          data: appData,
+          backgroundColor: ["#311cfd", "#31fb2a", "#fb0c2a"],
+          borderWidth: 3,
+        },
+      ],
+    },
+  });
+
+  const worldBar = document
+    .getElementById("bar-chart-container")
+    .getContext("2d");
+  let myWorldBarChart = new Chart(worldBar, {
+    type: "bar",
+    data: {
+      labels: ["Confirmed", "Recovered", "Deaths"],
+      datasets: [
+        {
+          label: "World Statistics",
+          data: appData,
+          borderWidth: "1",
+          borderColor: "black",
+          backgroundColor: [
+            "rgb(14, 94, 253,0.4)",
+            "rgb(3, 249, 104,0.4)",
+            "rgb(252, 94, 104,0.4)",
+          ],
+        },
+      ],
+    },
+  });
+}
+
+//   Getting Location of User
+let countryCode = geoplugin_countryCode();
+let userCountry;
+country_list.forEach((country) => {
+  if (country.code == countryCode) {
+    userCountry = country.name;
+  }
+});
+
+async function fetchCountryData(userCountry) {
+  countryData = [];
+  let url = `https://covid19.mathdro.id/api/countries/${userCountry}`;
+  await fetch(url)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      countryData.push(data["confirmed"]["value"]);
+      countryData.push(data["recovered"]["value"]);
+      countryData.push(data["deaths"]["value"]);
+      createCountryChart();
+      appendCountryData(userCountry, data);
+    });
+}
+fetchCountryData(userCountry);
+
+function appendCountryData(userCountry, data) {
+  var country_total_cases = document.querySelector(".total-cases .value");
+  var country_recovered_cases = document.querySelector(
+    ".recovered-cases .value"
+  );
+  var country_deaths = document.querySelector(".total-deaths .value");
+  var countryElement = document.querySelector(".country .name");
+  countryElement.innerHTML = userCountry;
+  country_total_cases.innerHTML = data["confirmed"]["value"];
+  country_recovered_cases.innerHTML = data["recovered"]["value"];
+  country_deaths.innerHTML = data["deaths"]["value"];
+}
+
+function createCountryChart() {
+  const line = document.getElementById("line-chart").getContext("2d");
+  let myCountrylineChart = new Chart(line, {
+    type: "line",
+    data: {
+      labels: ["Confirmed", "Recovered", "Deaths"],
+      datasets: [
+        {
+          label: "Country Data",
+          data: countryData,
+          borderColor: "black",
+          borderWidth: "0.5",
+          backgroundColor: "rgb(253, 254, 0,0.3)",
+        },
+      ],
+    },
+  });
+  const bar = document.getElementById("bar-chart").getContext("2d");
+  let myCountryBarChart = new Chart(bar, {
+    type: "bar",
+    data: {
+      labels: ["Confirmed", "Recovered", "Deaths"],
+      datasets: [
+        {
+          label: "Country Data",
+          data: countryData,
+          borderWidth: "1",
+          borderColor: "black",
+          backgroundColor: [
+            "rgb(14, 94, 253,0.4)",
+            "rgb(3, 249, 104,0.4)",
+            "rgb(252, 94, 104,0.4)",
+          ],
+        },
+      ],
+    },
+  });
+}

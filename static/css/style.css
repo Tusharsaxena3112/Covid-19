@@ -1,189 +1,186 @@
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 10px;
-    font-family: 'Lobster Two', cursive;
-    font-family: 'Overlock', cursive;
-    font-family: 'Rufina', serif;
+  margin: 10px;
+  font-family: "Architects Daughter", cursive;
+  font-family: "Zilla Slab", serif;
 }
 
 h1 {
-    font-family: "Lobster Two", cursive;
-    font-family: "Rufina", serif;
+  font-family: "Lobster Two", cursive;
+  font-family: "Rufina", serif;
 }
 
 .heading {
-    height: 15vh;
-    display: flex;
-    position: sticky;
-    top: 0;
-    background-color: rgb(165, 188, 252);
-    border-radius: 5px;
+  height: 15vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: rgb(165, 188, 252);
+  border-radius: 5px;
 }
 
 .heading-transparent {
-    height: 15vh;
-    display: flex;
-    position: sticky;
-    top: 0;
-    background: transparent;
-    border-radius: 5px;
+  height: 15vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  border-radius: 5px;
 }
 
-
-
 .heading .menu {
-    position: absolute;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 25px;
-    margin: 15px;
-    line-height: 10vh;
-    right: 0;
-    font-family: 'Lobster Two', cursive;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 25px;
+  margin: 15px;
+  line-height: 10vh;
+  right: 0;
+  font-family: "Lobster Two", cursive;
 }
 
 .heading-transparent .menu {
-    position: absolute;
-    padding: 10px;
-    font-size: 25px;
-    margin: 15px;
-    line-height: 10vh;
-    right: 0;
-    font-family: 'Lobster Two', cursive;
+  position: absolute;
+  padding: 10px;
+  font-size: 25px;
+  margin: 15px;
+  line-height: 10vh;
+  right: 0;
+  font-family: "Lobster Two", cursive;
 }
 
 .logo {
-    margin-left: 20px;
-    margin-top: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .logo img {
-    width: 70px;
+  width: 70px;
 }
 
 .logo img:hover {
-    width: 80px;
-    transition: 1s;
+  width: 80px;
+  transition: 1s;
 }
 
 .menu li {
-    display: inline;
+  display: inline;
 }
 
 .menu li a {
-    margin: 5px;
-    text-decoration: none;
-    color: rgb(14, 13, 13);
-    font-size: 30px;
+  margin: 5px;
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  font-size: 30px;
 }
 
 .menu li a:hover {
-    color: rgb(206, 53, 86);
-    transition: .5s
+  color: rgb(206, 53, 86);
+  transition: 0.5s;
 }
 
 .banner {
-    padding: 10px;
-    margin-top: 20px;
-    margin: 15px;
-    box-shadow: 2px 2px 2px 2px grey;
+  padding: 10px;
+  margin-top: 20px;
+  margin: 15px;
+  box-shadow: 2px 2px 2px 2px grey;
 }
 
 .banner video {
-    width: 100%;
-    height: 100vh;
-    opacity: 0.5;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
 }
 
 .main-content {
-    padding: 10px;
-    margin-top: 30px;
-    border-bottom: 1px solid rgb(228, 215, 215);
-    padding-bottom: 20px;
-    height: 80vh;
+  padding: 10px;
+  margin-top: 30px;
+  border-bottom: 1px solid rgb(228, 215, 215);
+  padding-bottom: 20px;
+  height: 80vh;
 }
 
 .main-content h1 {
-    margin-top: 30px;
-    text-shadow: 2px 2px #a19999;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+  margin-top: 30px;
+  text-shadow: 2px 2px #a19999;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .main-content__content {
-    padding: 10px;
-    width: 100%;
-    text-align: justify;
-    /* line-height: 20px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 10px;
+  width: 100%;
+  text-align: justify;
+  /* line-height: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-    margin: 20px;
-    width: 55%;
-    font-size: 20px;
-    line-height: 30px;
+  margin: 20px;
+  width: 55%;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .content-video {
-    width: 35%;
-    margin-left: 20px;
-    box-shadow: 1px 1px 1px 1px grey;
-    border-radius: 10px;
+  width: 35%;
+  margin-left: 20px;
+  box-shadow: 1px 1px 1px 1px grey;
+  border-radius: 10px;
 }
 
 .about-covid {
-    margin-top: 30px;
-    padding: 10px;
-    border-bottom: 1px solid rgb(228, 215, 215);
+  margin-top: 30px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(228, 215, 215);
 }
 
 .about-covid h1 {
-    margin-top: 30px;
-    text-shadow: 2px 2px #a19999;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+  margin-top: 30px;
+  text-shadow: 2px 2px #a19999;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .about-video {
-    margin: 20px;
+  margin: 20px;
 }
 
 .about-video video {
-    height: 100vh;
-    width: 100%;
-    padding: 10px;
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
 }
 
 .about-content {
-    margin: 20px;
-    width: 100%;
-    font-size: 20px;
-    padding: 50px;
-    text-align: justify;
+  margin: 20px;
+  width: 100%;
+  font-size: 20px;
+  padding: 50px;
+  text-align: justify;
 }
 
 .interactive-chart {
-    margin: 40px auto;
-    width: 90%;
-    border: 2px solid black;
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+  margin: 40px auto;
+  width: 90%;
+  border: 2px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
 }
 
 .chart {
-    box-shadow: 2px 2px 2px 2px grey;
-    border-radius: 20px;
-    padding: 10px;
+  box-shadow: 2px 2px 2px 2px grey;
+  border-radius: 20px;
+  padding: 10px;
 }
