@@ -8,6 +8,8 @@ body{
 }
 .news-items{
     padding:10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 h1{
     font-size:78px;
@@ -28,7 +30,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 28%;
+/*    width: 28%;*/
     float: left;
 }
 
