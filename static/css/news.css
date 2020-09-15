@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-    background: linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(255,255,248,0.8802871490393032) 0%, rgba(192,228,237,1) 97%);
+    background: linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%);
 }
 .news-items {
   padding: 10px;
