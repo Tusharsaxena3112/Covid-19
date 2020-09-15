@@ -29,6 +29,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 28%;
+    float: left;
 }
 
 .news-title{
