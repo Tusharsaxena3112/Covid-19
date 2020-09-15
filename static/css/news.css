@@ -9,7 +9,7 @@ body{
 .news-items{
     padding:10px;
 }
-.news-items h1{
+h1{
     font-size:78px;
     color:rgb(15, 15, 15);
     text-align: center;
