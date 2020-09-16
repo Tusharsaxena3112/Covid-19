@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 #box1{
     width: 100%;
@@ -128,7 +127,7 @@
     padding-left: 70px;
     padding-right: 60px;
 }
-/* #box4{
+#box4{
     width: 100%;
     background-color: darkslategray;
 }
@@ -137,7 +136,7 @@
     padding: 10px;
     font-size: 30px;
     text-align: center;
-} */
+}
 #box5{
     width: 100%;
     height: auto;
