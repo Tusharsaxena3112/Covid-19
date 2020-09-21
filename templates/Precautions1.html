@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/precautions.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <title>Precautions</title>
 </head>
 <body>
-    <div class="heading-transparent" id='mynav'>
+    <div id="efh">
+    <div id='mynav'>
         <div class="logo">
             <a href="/"><img alt="" src="../static/images/virus-1.svg"/></a>
         </div>
+        <input type="checkbox" id="but">
+        <label for="but" class="show-butn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <input type="checkbox" id="but">
+            <label for="but" class="hide-butn">
+                <i class="fas fa-times"></i>
+            </label>
         <ul class="menu">
             <li><a href="../templates/index.html">Home</a></li>
             <li><a href="../templates/tracker.html">Tracker</a></li>
@@ -84,34 +95,35 @@
             <div id="box332">
             <div id="box321">
                 <div id="pre"><img src="../static/images/17756-wash-your-hands-covid-19.gif" alt=""></div>
-                <h3>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</h3>
+                <div id="text321"><h3>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</h3></div>
             </div>
             <div id="box321">
                 <div id="pre"><img src="../static/images/18389-social-distancing.gif" alt=""></div>
-                <h3>Maintain a safe distance from anyone who is coughing or sneezing.</h3>
+                <div id="text321"><h3>Maintain a safe distance from anyone who is coughing or sneezing.</h3></div>
             </div>
             <div id="box321">
                 <div id="pre"><img src="../static/images/17895-wear-mask.gif" alt=""></div>
-                <h3>Wear a mask when physical distancing is not possible.</h3>
+                <div id="text321"><h3>Wear a mask when physical distancing is not possible.</h3></div>
             </div>
             </div>
             <div id="box332">
             <div id="box321">
                 <div id="pre"><img src="../static/images/15400-corona-virus-sick.gif" alt=""></div>
-                <h3>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</h3>
+                <div id="text321"><h3>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</h3></div>
             </div>
             <div id="box321">
                 <div id="pre"><img src="../static/images/19823-stay-home.gif" alt=""></div>
-                <h3>Stay home if you feel unwell.</h3>
+                <div id="text321"><h3>Stay home if you feel unwell.</h3></div>
             </div>
             <div id="box321">
                 <div id="pre"><img src="../static/images/14916-prueba-doctores-freepik.gif" alt=""></div>
-                <h3>If you have a fever, cough and difficulty breathing, seek medical attention.</h3>
+                <div id="text321"><h3>If you have a fever, cough and difficulty breathing, seek medical attention.</h3></div>
             </div>
             </div>
         </div>
     </div>
-    <h1 style="text-align: center;font-size: 40px;padding: 20px;background-color: black;color: white;">Awarness By WHO</h1>
+    <div id="box54321">
+    <h1 style="text-align: center;font-size: 40px;padding: 20px;color: white; border-radius:;">Awarness By WHO</h1>
     <div id="box5">
         <img src="../static/images/blue-1.png" alt="">
         <img src="../static/images/blue-3.png" alt="">
@@ -131,6 +143,7 @@
         </div>
     </div>
     <div id="box5"><img src="../static/images/be-ready-social-3.jpg" alt=""></div>
+    </div>
     <!-- <div id="box4">
         <h4>Covid-19 Tracker with Voice Assistant <i class="fas fa-copyright"></i> 2020</h4>
     </div> -->
@@ -172,8 +185,8 @@
         </section>
         <hr width="100%" noshade />
         <section class="sec-2">
-            <p>Register For Free</p>
-            <a href="#">Sign Up</a>
+            <p>Register for Free to get the Daily Updates</p>
+            <div><a href="#">Sign Up</a></div>
         </section>
         <hr width="100%" noshade />
         <section class="sec-3">
@@ -188,5 +201,6 @@
           </p>
         </section>
       </footer>
+    </div>
 </body>
 </html>
