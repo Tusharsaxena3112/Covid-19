@@ -15,22 +15,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Rufina&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Overlock&family=Rufina&display=swap"
           rel="stylesheet">
-          <link href="../static/css/footer.css"  rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="heading-transparent" id='mynav'>
-    <div class="logo">
-        <img alt="" src="../static/images/virus-1.svg"/>
+    <div class="heading-transparent" id='mynav'>
+        <div class="logo">
+            <a href="/"><img alt="" src="../static/images/virus-1.svg"/></a>
+        </div>
+        <ul class="menu">
+            <li><a href="tracker">Tracker</a></li>
+            <li><a href="news">News</a></li>
+            <li><a href="precautions">Precautions</a></li>
+            <li><a href="medi-care">Medi-Care</a></li>
+        </ul>
     </div>
-    <ul class="menu">
-        <li><a href="/index">Home</a></li>
-        <li><a href="/tracker">Tracker</a></li>
-        <li><a href="/news">News</a></li>
-        <li><a href="/precautions">Precautions</a></li>
-        <li><a href="/medi-care">Medi-Care</a></li>
-    </ul>
-</div>
 <div class="banner">
     <video autoplay id="myVideo" loop muted width="100vw">
         <source src="../static/video-1.mp4" type="video/mp4"/>
@@ -39,6 +37,11 @@
 <div class="main-content">
     <h1>What is COVID-19 ?</h1>
     <div class="main-content__content">
+        <div class="content-video">
+            <video autoplay loop muted>
+                <source src="../static/content-video.mp4" type="video/mp4"/>
+            </video>
+        </div>
         <p class="content">
             Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
 
@@ -54,11 +57,7 @@
             The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected
             person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by
             coughing into a flexed elbow).</p>
-        <div class="content-video">
-            <video autoplay loop muted width="500">
-                <source src="../static/content-video.mp4" type="video/mp4"/>
-            </video>
-        </div>
+        
     </div>
 </div>
 <div class="about-covid">
@@ -122,7 +121,6 @@
                    <li><a href="#">Python</a></li>
                  </ul>
              </section>
-  
              <section class="link2">
               <h2>Quick Links</h2>
               <ul>
