@@ -242,7 +242,14 @@ footer i{
 .sec-3 i:hover{
   color: white;
 }
-
+.sec-4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: black;
+  color: blanchedalmond;
+}
 
 
 
