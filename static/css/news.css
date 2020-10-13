@@ -216,6 +216,12 @@ footer i{
   background-color: rgb(74, 115, 226);
   border-radius: 25px;
   font-size: 18px;
+  text-decoration: none;
+  margin-top: 6px;
+}
+.sec-2 li a:hover{
+  background-color:red;
+  text-decoration: underline;
 }
 
 
