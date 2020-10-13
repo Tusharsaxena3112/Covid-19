@@ -24,26 +24,41 @@ h1 {
   border-radius: 5px;
 }
 
-.heading-transparent {
-  height: 15vh;
+.show-butn,.hide-butn{
+  font-size: 30px;
+  color: white;
+  line-height: 70px;
+  display: none;
+}
+.show-butn {
+  float: right;
+}
+
+#but {
+  position: absolute;
+  visibility: hidden;
+  z-index: -10;
+}
+#mynav {
+  height: 100px;
   display: flex;
   position: sticky;
   top: 0;
-  background: transparent;
-  border-radius: 5px;
+  background-color: skyblue;
+  opacity: 0.9;
+  margin-bottom: 3px;
+  border-radius:15px;
 }
-
-.heading .menu {
+.menu {
   position: absolute;
   padding-left: 10px;
   padding-right: 10px;
   font-size: 25px;
   margin: 15px;
-  line-height: 10vh;
+  line-height:50px;
   right: 0;
   font-family: "Lobster Two", cursive;
 }
-
 .heading-transparent .menu {
   position: absolute;
   padding: 10px;
@@ -56,7 +71,7 @@ h1 {
 
 .logo {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .logo img {
@@ -82,6 +97,15 @@ h1 {
 .menu li a:hover {
   color: rgb(206, 53, 86);
   transition: 0.5s;
+}
+.hide-butn{
+  opacity:0;
+}
+#but:checked~.show-butn{
+  opacity: 0;
+}
+#but:checked~.hide-butn{
+  opacity: 1;
 }
 
 .banner {
@@ -530,5 +554,55 @@ hr {
     right: 0;
     font-family: "Lobster Two", cursive;
     display: none;
+  }
+}
+@media(max-width:838px){
+  #mynav{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .show-butn,
+  .hide-butn {
+    display: block;
+    padding-right: 20px;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -250%;
+    width: 100%;
+    height: 100vh;
+    background-color:skyblue;
+    text-align: center;
+    color:black;
+    line-height: normal;
+    transition: 1s;
+    margin: 0;
+    padding-top: 60px;
+    opacity: 1;
+  }
+
+  .menu li {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px white solid;
+  }
+
+  .menu li a {
+    display: block;
+  }
+  .hide-butn {
+    position: absolute;
+    right: 5px;
+    font-size: 40px;
+    top: 15
+    px;
+    z-index: 1;
+  }
+
+  #but:checked ~ .menu {
+    right: 0%;
   }
 }

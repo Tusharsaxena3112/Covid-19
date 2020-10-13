@@ -5,6 +5,9 @@
     <title>Tracker</title>
     <link href="../static/css/style.css" rel="stylesheet" />
     <link href="../static/css/tracker_1.css" rel="stylesheet" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
     <link href="../static/css/footer.css" rel="stylesheet" />
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -25,17 +28,26 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   </head>
   <body>
-    <div class="heading" id="mynav">
+    <div id='mynav'>
       <div class="logo">
-        <a href="/"><img alt="" src="../static/images/virus-1.svg" /></a>
+          <a href="/"><img alt="" src="../static/images/virus-1.svg"/></a>
       </div>
+      <input type="checkbox" id="but">
+      <label for="but" class="show-butn">
+          <i class="fas fa-bars"></i>
+      </label>
+      <input type="checkbox" id="but">
+          <label for="but" class="hide-butn">
+              <i class="fas fa-times"></i>
+          </label>
       <ul class="menu">
-        <li><a href="/tracker">Tracker</a></li>
-        <li><a href="/news">News</a></li>
-        <li><a href="/precautions">Precautions</a></li>
-        <li><a href="/medi-care">Medi-Care</a></li>
+          <li><a href="../templates/index.html">Home</a></li>
+          <li><a href="../templates/tracker.html">Tracker</a></li>
+          <li><a href="../templates/News.html">News</a></li>
+          <li><a href="../templates/Precautions1.html">Precautions</a></li>
+          <li><a href="#">Medi-Care</a></li>
       </ul>
-    </div>
+  </div>
     <div class="banner-img">
       <div class="banner-content">
         <h2>Track Your Country!</h2>
