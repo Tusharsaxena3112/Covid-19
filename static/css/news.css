@@ -146,6 +146,18 @@ h1 {
 #but:checked~.hide-butn{
   opacity: 1;
 }
+
+footer{
+  width: 100%;
+  background-color: rgba(70, 68, 68, 0.8);
+}
+
+
+
+
+
+
+
 @media(max-width:838px){
   #mynav{
     height: 10vh;
