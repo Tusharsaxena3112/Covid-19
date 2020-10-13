@@ -166,12 +166,17 @@ footer i{
 .abput{
   width: 40%;
 }
-sec-1 h2{
+.sec-1 h2{
   font-size: 30px;
   font-family: "Zilla Slab" , serif ;
   color: white;
 }
-
+.about p{
+  color: rgb(165, 188, 252);
+  text-align: justify;
+  line-height: 24px;
+  margin-top: 9px;
+}
 
 
 
