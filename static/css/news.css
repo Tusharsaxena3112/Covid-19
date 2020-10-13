@@ -159,10 +159,7 @@ footer{
   margin: 13px;
   padding: 17px 15px;
 }
-footer i{
-  font-size: 24px;
-  padding: 5px;
-}
+
 .abput{
   width: 40%;
 }
@@ -194,7 +191,10 @@ footer i{
   font-size: 20px;
   color: rgb(165, 188, 252);
 }
-
+footer i{
+  font-size: 24px;
+  padding: 5px;
+}
 
 
 
