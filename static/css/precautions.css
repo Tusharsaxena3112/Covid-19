@@ -54,7 +54,7 @@
 
 .logo {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 7px;
 }
 
 .logo img {
@@ -585,26 +585,20 @@ hr{
     display: block;
     padding-right: 20px;
   }
-  #but:checked~.show-butn{
-    opacity: 1;
-  }
-  #but:checked~.hide-butn{
-    opacity: 0;
-  }
   .menu {
     position: fixed;
     top: 0;
     right: -250%;
-    width: 97%;
+    width: 100%;
+    margin: 0;
     height: 100vh;
     background-color:skyblue;
     text-align: center;
     color:black;
     line-height: normal;
     transition: 1s;
-    padding: 80px 0;
+    padding-top: 60px;
     opacity: 1;
-    border-radius: 25px;
   }
 
   .menu li {
@@ -616,11 +610,13 @@ hr{
   .menu li a {
     display: block;
   }
-
   .hide-butn {
     position: absolute;
-    right: 20px;
-    top: 10px;
+    right: 5px;
+    font-size: 40px;
+    top: 15
+    px;
+    z-index: 1;
   }
 
   #but:checked ~ .menu {
