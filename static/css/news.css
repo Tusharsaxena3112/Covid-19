@@ -171,13 +171,19 @@ footer i{
   font-family: "Zilla Slab" , serif ;
   color: white;
 }
-.about p , .tech p{
+.about p {
   color: rgb(165, 188, 252);
   text-align: justify;
   line-height: 24px;
   margin-top: 9px;
 }
-
+.sec-1 li {
+  list-style: none;
+}
+.sec-1 li a{
+  font-size: 20px;
+  
+}
 
 
 
