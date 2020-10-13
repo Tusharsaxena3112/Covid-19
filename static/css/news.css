@@ -199,8 +199,11 @@ footer i{
   display:flex;
   justify-content: center;
   padding: 30px;
+  color: rgb(66,0,0);
 }
-
+.sec-2 li{
+  list-style: none;
+}
 
 
 
