@@ -237,6 +237,10 @@ footer i{
 .sec-3 i{
   font-size: 50px;
   margin: 20px;
+  color: lightblue;
+}
+.sec-3 i:hover{
+  color: white;
 }
 
 
