@@ -223,6 +223,20 @@ footer i{
   background-color:red;
   text-decoration: underline;
 }
+.sec-3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.sec-3 li{
+  list-style: none;
+  background-color:rgba(92, 89, 89, 0.8);
+}
+.sec-3 i{
+  font-size: 50px;
+  margin: 20px;
+}
 
 
 
