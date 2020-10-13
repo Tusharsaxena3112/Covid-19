@@ -179,11 +179,19 @@ footer i{
 }
 .sec-1 li {
   list-style: none;
+  margin-top: 10px;
 }
 .sec-1 li a{
   text-decoration: none;
   font-size: 20px;
   color:rgb(165, 188, 252) ;
+}
+.sec-1 li a:hover{
+  color: white;
+  text-decoration: underline;
+}
+.contact li{
+  font-size: 20px;
 }
 
 
