@@ -231,7 +231,8 @@ footer i{
 }
 .sec-3 li{
   list-style: none;
-  background-color:rgba(92, 89, 89, 0.8);
+  background-color:rgba(114, 112, 112, 0.8);
+  border-radius: 50%;
 }
 .sec-3 i{
   font-size: 50px;
