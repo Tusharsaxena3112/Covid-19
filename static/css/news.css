@@ -157,6 +157,19 @@ footer{
   flex-direction: row;
   justify-content: space-between;
   margin: 13px;
+  padding: 17px 15px;
+}
+footer i{
+  font-size: 24px;
+  padding: 5px;
+}
+.abput{
+  width: 40%;
+}
+sec-1 h2{
+  font-size: 30px;
+  font-family: "Zilla Slab" , serif ;
+  color: white;
 }
 
 
