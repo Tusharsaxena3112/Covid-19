@@ -272,6 +272,9 @@ i:hover {
   color: rgb(165, 188, 252);
   margin-top: 10px;
 }
+.link3 i{
+  padding: 6px;
+}
 .sec-2 {
   display: flex;
   justify-content: center;
