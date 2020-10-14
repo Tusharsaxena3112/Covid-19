@@ -33,6 +33,12 @@ h1 {
   align-items: center;
 }
 
+.news-item .loading{
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
 .news-title {
   font-size: 28px;
   line-height:30px;
@@ -254,6 +260,9 @@ hr{
   opacity: 0.2;
 }
 
+.hidden{
+  display: none;
+}
 
 
 

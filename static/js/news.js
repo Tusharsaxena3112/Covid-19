@@ -1,5 +1,6 @@
 
  async function getapi(){
+    var loading = document.getElementsById('gif');
     url = "https://cryptic-ravine-96718.herokuapp.com/";
     await fetch(url)
     .then(res=>{
@@ -9,6 +10,7 @@
     .then(data=>{
         console.log(data['news']);
         appendData(data['news']);
+        loading.classList.add('hidden');
     })
 }
 getapi();
