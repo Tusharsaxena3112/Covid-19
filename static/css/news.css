@@ -331,11 +331,6 @@ hr{
   }
 }
 
-@media(max-width:1331px){
-  .news-link a {
-    text-decoration: none;
-    font-size: 20px;
-    color: red;
-    
-  }
+@media(max-width:986px){
+
 }
