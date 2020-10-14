@@ -341,3 +341,13 @@ hr{
     padding: 9px;
   }
 }
+
+@media(max-width:961px)and (min-width:875px){
+  h1 {
+    font-size: 60px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 9px;
+    padding: 8px;
+  }
+}
