@@ -181,7 +181,7 @@ footer{
   padding: 17px 15px;
 }
 
-.abput{
+.about{
   width: 40%;
 }
 .sec-1 h2{
@@ -279,7 +279,43 @@ hr{
   display: none;
 }
 
+@media(max-width:1090){
+  .about{
+    width: 100%;
+  }
+}
 
+@media(max-width:1080px)and (min-width:990px){
+  h1 {
+    font-size: 70px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 10px;
+    padding: 9px;
+  }
+  .news-title {
+    font-size: 22px;
+    line-height:27px;
+    text-align: justify;
+    margin-top: 8px;
+  }
+}
+
+@media(max-width:989px)and (min-width:875px){
+  h1 {
+    font-size: 60px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 9px;
+    padding: 8px;
+  }
+  .news-title {
+    font-size: 20px;
+    line-height:25px;
+    text-align: justify;
+    margin-top: 8px;
+  }
+}
 
 @media(max-width:838px){
   #mynav{
@@ -329,37 +365,5 @@ hr{
 
   #but:checked ~ .menu {
     right: 0%;
-  }
-}
-
-@media(max-width:1069px)and (min-width:990px){
-  h1 {
-    font-size: 70px;
-    color: rgb(15, 15, 15);
-    text-align: center;
-    margin: 10px;
-    padding: 9px;
-  }
-  .news-title {
-    font-size: 22px;
-    line-height:27px;
-    text-align: center;
-    margin-top: 8px;
-  }
-}
-
-@media(max-width:989px)and (min-width:875px){
-  h1 {
-    font-size: 60px;
-    color: rgb(15, 15, 15);
-    text-align: center;
-    margin: 9px;
-    padding: 8px;
-  }
-  .news-title {
-    font-size: 22px;
-    line-height:27px;
-    text-align: center;
-    margin-top: 8px;
   }
 }
