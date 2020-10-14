@@ -19,6 +19,7 @@ h1 {
   text-align: center;
   margin: 10px;
   padding: 10px;
+  font-family: cursive;
 }
 
 .news-item {
@@ -331,6 +332,12 @@ hr{
   }
 }
 
-@media(max-width:986px){
-
+@media(max-width:990px)and (min-width:875px){
+  h1 {
+    font-size: 70px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 10px;
+    padding: 9px;
+  }
 }
