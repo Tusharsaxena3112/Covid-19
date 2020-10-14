@@ -332,7 +332,7 @@ hr{
   }
 }
 
-@media(max-width:990px)and (min-width:875px){
+@media(max-width:1069px)and (min-width:990px){
   h1 {
     font-size: 70px;
     color: rgb(15, 15, 15);
@@ -340,14 +340,26 @@ hr{
     margin: 10px;
     padding: 9px;
   }
+  .news-title {
+    font-size: 22px;
+    line-height:27px;
+    text-align: center;
+    margin-top: 8px;
+  }
 }
 
-@media(max-width:961px)and (min-width:875px){
+@media(max-width:989px)and (min-width:875px){
   h1 {
     font-size: 60px;
     color: rgb(15, 15, 15);
     text-align: center;
     margin: 9px;
     padding: 8px;
+  }
+  .news-title {
+    font-size: 22px;
+    line-height:27px;
+    text-align: center;
+    margin-top: 8px;
   }
 }
