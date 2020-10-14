@@ -32,11 +32,16 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-
-.news-item .loading{
-  height: 100vh;
+.loading{
+  display:flex;
   align-items: center;
   justify-content: center;
+  margin-left: 350px;
+}
+
+.loading img{
+  height: 70vh;
+  margin-left: 50px;
 }
 
 .news-title {
