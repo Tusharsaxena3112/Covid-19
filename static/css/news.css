@@ -280,8 +280,19 @@ hr{
 }
 
 @media(max-width:1090){
+  .sec-1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 13px;
+    padding: 17px 15px;
+  }
   .about{
     width: 100%;
+  }
+  .tech , .quicklink , .contact{
+    margin-top: 18px;
   }
 }
 
