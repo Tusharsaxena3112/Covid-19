@@ -108,6 +108,7 @@ h1 {
   background-color: skyblue;
   opacity: 0.9;
   margin-bottom: 3px;
+  width: 100%;
 }
 .menu {
   position: absolute;
@@ -312,7 +313,7 @@ hr{
   }
 }
 
-@media(max-width:989px)and (min-width:875px){
+@media(max-width:989px)and (min-width:826px){
   h1 {
     font-size: 60px;
     color: rgb(15, 15, 15);
@@ -377,4 +378,66 @@ hr{
   #but:checked ~ .menu {
     right: 0%;
   }
+  .logo {
+    margin-left: 20px;
+    margin-top: 7px;
+  }
+  
+  .logo img {
+    width: 50px;
+  }
+  
+  .logo img:hover {
+    width: 60px;
+    transition: 1s;
+  }
+}
+
+@media(max-width:825px) and (min-width:685px){
+  h1 {
+    font-size: 50px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 7px;
+    padding: 6px;
+  }
+}
+@media(max-width:685px){
+  h1 {
+    font-size: 40px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 5px;
+    padding: 4px;
+  }
+}
+@media(max-width:545px){
+  h1 {
+    font-size: 30px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 3px;
+    padding: 2px;
+  }
+
+}
+@media(max-width:419px){
+  h1 {
+    font-size: 27px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 2px;
+    padding: 1px;
+  }
+
+}
+@media(max-width:363px) and (min-width:329px){
+  h1 {
+    font-size: 23px;
+    color: rgb(15, 15, 15);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
 }
