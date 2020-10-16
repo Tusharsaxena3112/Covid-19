@@ -430,6 +430,12 @@ hr{
     margin: 5px;
     padding: 4px;
   }
+  .news-items {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
 }
 @media(max-width:545px){
   h1 {
