@@ -400,6 +400,27 @@ hr{
     margin: 7px;
     padding: 6px;
   }
+  .news-title {
+    font-size: 19px;
+    line-height:24px;
+    text-align: justify;
+    margin-top: 7px;
+  }
+  .news-link{
+    margin-bottom: 2px;
+    margin-top: 10px;
+  }
+  
+  .news-link a {
+    text-decoration: none;
+    font-size: 22px;
+    color: red;
+    margin: 9px;
+    background-color: rgb(134, 134, 235);
+    border-radius: 6px;
+    padding: 6px 7px;
+    
+  }
 }
 @media(max-width:685px){
   h1 {
