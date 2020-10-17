@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../static/css/medicare.css">
+    <link rel="stylesheet" href="../static/css/medicare.css" />
   </head>
   <body>
     <div class="banner">
       <div class="banner_content">
-        <h1 class='banner_heading'>
-          Real heroes wear masks below their eyes.
-        </h1>
-        <input class='banner_search' type="search" name="hospital" id="hospital_id" placeholder="Search for your city">
+        <h1 class="banner_heading">Real heroes wear masks below their eyes.</h1>
+        <input
+          class="banner_search"
+          type="search"
+          name="hospital"
+          id="hospital_id"
+          placeholder="Search for your city"
+          onchange="filter_add()"
+        />
       </div>
     </div>
-    <div class="hospitals" id='hospital_section'>
-
-    </div>
+    <div class="hospitals" id="hospital_section"></div>
     <script src="../static/js/medicare.js"></script>
   </body>
 </html>
