@@ -18,9 +18,8 @@ function add_data(hospitals){
     hospitals.forEach(element => {
        h.innerHTML+= `
         <div class='hospital'>
-            // <img src='../static/images/doctor.jpg'/>
             <h3 class='name'>${element.name}</h3>
-            <h4 class='beds'>${element.hospitalBeds}</h4>
+            <h4 class='beds'>Beds:${element.hospitalBeds}</h4>
             <h4 class='state'>${element.state}</h4>
         </div>
        `
