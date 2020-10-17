@@ -3,8 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-    background: linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%);
+body{
+  min-height: 100%;
+  width: auto;
+  background: linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%) no-repeat;
+  background: -moz-linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%) no-repeat;
+  background: -ms-linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%) no-repeat;
+  background: -webkit-linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%) no-repeat;
+  background: -webkit-linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%) no-repeat;
+  background: -o-linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%) no-repeat;
+  background:  linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%) no-repeat;  
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .news-items {
   padding: 10px;
