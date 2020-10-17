@@ -430,7 +430,7 @@ hr{
     margin: 5px;
     padding: 4px;
   }
-  .news-item {
+  /* .news-item {
     background: rgb(191, 191, 240);
     box-shadow: 2px 5px 2px 2px  hotpink;
     margin: 27px;
@@ -439,7 +439,12 @@ hr{
     display: block;
     justify-content: center;
     align-items: center;
-    width: 60%;
+  } */
+  .news-items {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
   }
 }
 @media(max-width:545px){
