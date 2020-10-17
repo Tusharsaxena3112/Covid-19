@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/medi-care.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .7;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner_content{
+    position: absolute;
+    top:15vh;
+    text-align: center;
+    align-items: center;
+}
+.banner_heading{
+    font-size: 60px;
+    text-align: center;
+    font-variant:small-caps;
+    color: rgb(3, 3, 3);
+}
+.banner_search{
+    width: 60%;
+    height: 10vh;
+    font-size: 8vh;
+    margin: 20px;
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius: 5px;
+    outline: none;
+    color: rgb(50, 50, 51);
+}
+
+.banner_search[placeholder]{
+    font-size:4vh;
+    text-align: center;
+    color: rgb(12, 12, 12);
+}
