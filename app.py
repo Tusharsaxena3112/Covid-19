@@ -25,7 +25,7 @@ def news():
 
 @app.route('/medi-care')
 def medi_care():
-    return render_template('medi-care.html')
+    return render_template('medicare.html')
 
 
 if __name__ == '__main__':
