@@ -44,3 +44,21 @@ body{
     text-align: center;
     color: rgb(12, 12, 12);
 }
+.hospitals{
+    position: absolute;
+    top:80vh;
+}
+
+.hospital{
+    border: 1px solid black; 
+}
+
+.hospital img{
+    width: 100%;
+    height: 10vh;
+}
+
+.hospital .name{
+    text-align: center;
+    
+}
