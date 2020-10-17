@@ -433,13 +433,13 @@ hr{
   .news-item {
     background: rgb(191, 191, 240);
     box-shadow: 2px 5px 2px 2px  hotpink;
-    margin: 35px;
+    margin: 27px;
     padding: 10px;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
+    display: block;
     justify-content: center;
     align-items: center;
+    width: 60%;
   }
 }
 @media(max-width:545px){
