@@ -320,6 +320,17 @@ hr{
     text-align: justify;
     margin-top: 8px;
   }
+  .news-item {
+    background: rgb(191, 191, 240);
+    box-shadow: 2px 5px 2px 2px  hotpink;
+    margin: 24px;
+    padding: 11px;
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media(max-width:989px)and (min-width:826px){
