@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
+/*body{
   min-height: 100%;
   width: auto;
   background: linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%) no-repeat;
@@ -15,6 +15,14 @@ body{
   background:  linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(185, 242, 247, 0.88) 0%, rgb(255, 239, 168) 97%) no-repeat;  
   background-size: cover;
   background-repeat: no-repeat;
+}*/
+body{
+  background-image: url(../images/news_bi.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 .news-items {
   padding: 10px;
