@@ -289,6 +289,20 @@ hr{
   display: none;
 }
 
+@media(max-width:1200px){
+  .loading{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 380px;
+  }
+  
+  .loading img{
+    height: 30vh;
+    margin-left: 80px;
+  }
+}
+
 @media(max-width:1010px){
   .sec-1{
     display: flex;
@@ -304,6 +318,7 @@ hr{
   .tech , .quicklink , .contact{
     margin-top: 18px;
   }
+  
 }
 
 @media(max-width:1080px)and (min-width:990px){
