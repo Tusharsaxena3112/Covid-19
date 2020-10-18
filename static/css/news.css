@@ -22,7 +22,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
 }
 .news-items {
   padding: 10px;
@@ -42,7 +42,7 @@ h1 {
 
 .news-item {
   background: rgb(191, 191, 240);
-  box-shadow: 2px 5px 2px 2px  hotpink;
+  box-shadow: 2px 5px 2px   hotpink , -2px -5px 9px white;
   margin: 27px;
   padding: 12px;
   border-radius: 20px;
