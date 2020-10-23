@@ -6,3 +6,88 @@
 body{
     margin: 10px;
 }
+#mynav {
+    height: 100px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: skyblue;
+    opacity: 0.9;
+    margin-bottom: 3px;
+    border-radius:15px;
+  }
+  .menu {
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    margin: 15px;
+    line-height:50px;
+    right: 0;
+    font-family: "Lobster Two", cursive;
+  }
+  .heading-transparent .menu {
+    position: absolute;
+    padding: 10px;
+    font-size: 25px;
+    margin: 15px;
+    line-height: 10vh;
+    right: 0;
+    font-family: "Lobster Two", cursive;
+  }
+  
+  .logo {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .logo img {
+    width: 70px;
+  }
+  
+  .logo img:hover {
+    width: 80px;
+    transition: 1s;
+  }
+  
+  .menu li {
+    display: inline;
+  }
+  
+  .menu li a {
+    margin: 5px;
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+    font-size: 30px;
+  }
+  
+  .menu li a:hover {
+    color: rgb(206, 53, 86);
+    transition: 0.5s;
+  }
+  .hide-butn{
+    opacity:0;
+  }
+  #but:checked~.show-butn{
+    opacity: 0;
+  }
+  #but:checked~.hide-butn{
+    opacity: 1;
+  }
+  .show-butn,.hide-butn{
+    font-size: 30px;
+    color: white;
+    line-height: 70px;
+    display: none;
+  }
+  .show-butn {
+    float: right;
+  }
+  
+  #but {
+    position: absolute;
+    visibility: hidden;
+    z-index: -10;
+  }
+  
+  
