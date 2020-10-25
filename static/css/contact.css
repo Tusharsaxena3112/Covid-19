@@ -93,8 +93,8 @@ body{
   #mem-1{
     margin-top: 20px;
     width: 100%;
-    background-color:rgb(109, 187, 109);
-    height: max-content;
+    background-color:rgb(20, 75, 29);
+    height: 360px;
   }
   #left{
     float: left;
@@ -106,5 +106,7 @@ body{
     margin-left: 100px;
     margin-top: 50px;
     border-radius: 5%;
+    border: 3px solid black;
+    box-shadow: 2px 2px 2px 2px gray;
    
   }
