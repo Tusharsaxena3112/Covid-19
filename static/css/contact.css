@@ -101,9 +101,10 @@ body{
   
   }
   #left img{
-    width: 20%;
-    height: 15%;
+    width: 30%;
+    height: 25%;
     margin-left: 100px;
     margin-top: 50px;
+    border-radius: 5%;
    
   }
