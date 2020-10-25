@@ -91,7 +91,19 @@ body{
   }
 
   #mem-1{
+    margin-top: 20px;
     width: 100%;
-    background-color:rgb(102, 29, 47);
+    background-color:rgb(109, 187, 109);
     height: max-content;
+  }
+  #left{
+    float: left;
+  
+  }
+  #left img{
+    width: 20%;
+    height: 15%;
+    margin-left: 100px;
+    margin-top: 50px;
+   
   }
