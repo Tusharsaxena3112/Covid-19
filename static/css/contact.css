@@ -89,5 +89,9 @@ body{
     visibility: hidden;
     z-index: -10;
   }
-  
-  
+
+  #mem-1{
+    width: 100%;
+    background-color:rgb(102, 29, 47);
+    height: max-content;
+  }
