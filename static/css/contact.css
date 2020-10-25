@@ -89,24 +89,35 @@ body{
     visibility: hidden;
     z-index: -10;
   }
+  #mem-info{
+    
+    padding: 20px;
+  }
 
   #mem-1{
-    margin-top: 20px;
     width: 100%;
     background-color:rgb(20, 75, 29);
-    height: 360px;
+    height: 50vh;
+    
   }
   #left{
     float: left;
-  
+    
   }
   #left img{
     width: 30%;
     height: 25%;
     margin-left: 100px;
-    margin-top: 50px;
+    margin-top: 30px;
     border-radius: 5%;
     border: 3px solid black;
     box-shadow: 2px 2px 2px 2px gray;
    
+  }
+
+  #right{
+  margin-top: 50px;
+ 
+   
+
   }
