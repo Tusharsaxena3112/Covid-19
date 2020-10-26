@@ -90,16 +90,21 @@ body{
     z-index: -10;
   }
   #mem-info{
-    
-    padding: 20px;
+
+    padding-top: 20px;
+   
   }
 
   #mem-1{
     width: 100%;
-    background-color:rgb(15, 121, 207);
+    background-color:rgb(17, 148, 255);
     height: 50vh;
-    
+    border-radius: 10px;  
   }
+  #mem-1:hover{
+    background-color: gray;
+  }
+  
   #left{
     float: left;
     width: 30%;
@@ -115,6 +120,11 @@ body{
     border: 3px solid black;
     box-shadow: 2px 2px 2px 2px rgb(156, 156, 156);   
   }
+  #left img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+
+  }
 
   #right{
  padding: 30px;
@@ -124,7 +134,7 @@ body{
     margin-top: 30px;
     margin-bottom: 20px;
     color: black;
-    font-size: 30px;
+    font-size: 32px;
 
   }
   #right h3{
@@ -134,5 +144,6 @@ body{
   }
   #right p{
     color: yellow;
+    font-size: 17px;
   }
 
