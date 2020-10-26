@@ -101,7 +101,7 @@ body{
     height: 50vh;
     border-radius: 10px;  
     border: 3px solid rgb(45, 2, 114);
-    box-shadow: 2px 2px 2px 2px rgb(168, 168, 255);
+    box-shadow: 2px 2px 2px 2px rgb(20, 34, 228);
   }
   #mem-1:hover{
     background-color: gray;
@@ -157,6 +157,7 @@ body{
     border-radius: 10px;  
     margin-top: 20px;
     border: 3px solid rgb(85, 1, 81);
+    box-shadow: 2px 2px 2px 2px purple;
 
   }
   #mem-3:hover{
