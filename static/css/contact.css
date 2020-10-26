@@ -100,6 +100,8 @@ body{
     background-color:rgb(17, 148, 255);
     height: 50vh;
     border-radius: 10px;  
+    border: 3px solid rgb(45, 2, 114);
+    box-shadow: 2px 2px 2px 2px rgb(168, 168, 255);
   }
   #mem-1:hover{
     background-color: gray;
@@ -150,12 +152,18 @@ body{
   #mem-3{
 
     width: 100%;
-    background-color: rgb(180, 99, 180);
+    background-color: rgba(255, 126, 255, 0.897);
     height: 50vh;
     border-radius: 10px;  
     margin-top: 20px;
+    border: 3px solid rgb(85, 1, 81);
 
   }
   #mem-3:hover{
     background-color: gray;
+  }
+  #img3 img{
+    height: 25%;
+    width: 30%;
+    
   }
