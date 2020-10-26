@@ -119,6 +119,11 @@ body{
   #right{
  padding: 30px;
  
-   
+  }
+  #right h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 30px;
 
   }
