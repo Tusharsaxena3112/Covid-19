@@ -177,3 +177,6 @@ body{
     border:3px solid rgb(122, 2, 2);
     box-shadow: 2px 2px 2px 2px rgb(173, 66, 66);
   }
+  #mem-3:hover{
+    background-color: gray;
+  }
