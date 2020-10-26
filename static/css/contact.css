@@ -149,7 +149,7 @@ body{
     font-size: 17px;
   }
  
-  #mem-3{
+  #mem-2{
 
     width: 100%;
     background-color: rgba(255, 126, 255, 0.897);
@@ -160,10 +160,10 @@ body{
     box-shadow: 2px 2px 2px 2px purple;
 
   }
-  #mem-3:hover{
+  #mem-2:hover{
     background-color: gray;
   }
-  #img3 img{
+  #img2 img{
     height: 25%;
     width: 30%;
     
