@@ -205,6 +205,21 @@ body{
     width: 30%;
   }
 
+
+  #mem-5{
+    width: 100%;
+    height: 50vh;
+    background-color:rgb(42, 128, 49);
+    margin-top: 20px;
+    border-radius: 10px;
+    border:3px solid rgb(3, 59, 3);
+    box-shadow: 2px 2px 2px 2px rgb(21, 182, 29);
+  }
+  #img5 img{
+    height: 50%;
+    width: 33%;
+  }
+
   footer {
     width: 100%;
     margin-top: 10px;
@@ -329,3 +344,4 @@ body{
     float:right;
     padding-bottom: 20px;
   } */
+
