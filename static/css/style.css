@@ -301,7 +301,13 @@ i:hover {
 .sec-3 {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 20px;
+}
+.sec-3 ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sec-3 ul li {
   list-style: none;

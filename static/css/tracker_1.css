@@ -346,6 +346,11 @@ h1 {
 #but:checked~.hide-butn{
   opacity: 1;
 }
+.sec-3 ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 600px) {
   .latest-report {

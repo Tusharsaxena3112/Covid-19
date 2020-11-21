@@ -270,6 +270,7 @@ footer i{
 }
 .sec-3 li{
   list-style: none;
+  margin-right: 10px;
   background-color:rgba(114, 112, 112, 0.8);
   border-radius: 50%;
 }
