@@ -575,7 +575,7 @@ hr{
 }
 @media(max-width:838px){
   #mynav{
-    height: 10vh;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -614,8 +614,7 @@ hr{
     position: absolute;
     right: 5px;
     font-size: 40px;
-    top: 15
-    px;
+    top: 15px;
     z-index: 1;
   }
 
