@@ -19,6 +19,7 @@ getapi();
 
 
 
+
 function appendData(data){
     var newsElement = document.getElementById('news');
     var loading = document.getElementById('gif');

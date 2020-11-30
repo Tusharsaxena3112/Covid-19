@@ -16,6 +16,7 @@ function fetchWorldData() {
     });
 }
 
+
 function appendData(data) {
   var totalcases = document.querySelector(".overall-confirmed .value");
   var recoveredCases = document.querySelector(".overall-recovered .value");
